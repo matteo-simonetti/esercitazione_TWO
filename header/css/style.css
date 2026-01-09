@@ -121,14 +121,20 @@ html, body {
         transform: translateX(var(--first-group-shift));
     }
 
-    @media (max-width: 1200px) and (min-width: 992px) {
+    @media (max-width: 1400px) and (min-width: 992px) {
         .nav-list { --first-group-shift: -60px; }
     }
+    @media (max-width: 1300px) and (min-width: 992px) {
+        .nav-list { --first-group-shift: -30px; gap: 4rem; }
+    }
+    @media (max-width: 1200px) and (min-width: 992px) {
+        .nav-list { --first-group-shift: 0; gap: 2.5rem; }
+    }
     @media (max-width: 1100px) and (min-width: 992px) {
-        .nav-list { --first-group-shift: -30px; }
+        .nav-list { gap: 1.5rem; }
     }
     @media (max-width: 1024px) and (min-width: 992px) {
-        .nav-list { --first-group-shift: 0; flex-wrap: wrap; gap: 0.75rem; }
+        .nav-list { flex-wrap: wrap; gap: 0.75rem; }
         .nav-list .nav-item:nth-child(-n+3) .nav-link { font-size: 20px; }
     }
 
