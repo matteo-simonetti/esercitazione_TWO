@@ -686,19 +686,20 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
     padding: 8px;
     font-size: 20px;
   }
-.modulo-calendario-img {
-  background: #ddd;
-  height: 200px;
-  overflow: hidden;
-}
-.modulo-calendario-img img {
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-}
-  .padding-top-h1 {
-    padding-top: 56px;
-}
+
+  .modulo-calendario-img {
+    background: #ddd;
+    height: 200px;
+    overflow: hidden;
+  }
+  .modulo-calendario-img img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+    .padding-top-h1 {
+      padding-top: 56px;
+  }
 
   .desktop-only {
     display: none !important;
@@ -734,6 +735,24 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
     padding-right: 15px;
   }
 }
+
+  .modulo-4 {
+  background: #26547C;
+  height: 340px;
+  overflow: hidden;
+  color: white;
+}
+
+  .modulo-4-img {
+    background: #ddd;
+    height: 240px;
+    overflow: hidden;
+  }
+  .modulo-4-img img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
 @media (max-width: 767.98px) {
   .btn-mostra-piu {
     padding: 10px 24px;
