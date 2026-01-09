@@ -801,11 +801,23 @@ p {
 .maiuscoletto {
   font-variant: small-caps;
 }
+.pattern_1{
+  width: 100%;
+}
 .video_home {
-  width: 1440px;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
-@media (max-width: 576px) {
-  .video_home {
-  width: 576px;
-  }
+
+.box_testo{
+  background-color: #26547C;
+  width: 100%;
 }
+.testo_h1{
+  color: white;
+  font-size: 48px;
+}
+
