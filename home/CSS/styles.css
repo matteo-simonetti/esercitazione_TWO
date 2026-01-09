@@ -749,6 +749,7 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
     padding-left: calc((100vw - (100vw - 200px)) / 2);
     padding-right: 15px;
   }
+
 }
 /* Nuove classi font */
 h1 {
