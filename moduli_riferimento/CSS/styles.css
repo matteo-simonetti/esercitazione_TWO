@@ -686,7 +686,16 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
     padding: 8px;
     font-size: 20px;
   }
-
+.modulo-calendario-img {
+  background: #ddd;
+  height: 200px;
+  overflow: hidden;
+}
+.modulo-calendario-img img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
   .padding-top-h1 {
     padding-top: 56px;
 }
