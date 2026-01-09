@@ -11,7 +11,6 @@
 }
 
 /* HEADER */
-
 :root{--brand:#26547C;--accent:#FFE66D;--accent-hover:#FFF39A;--drawer-bg:#1e4466}
 
 .header{height:115px;background-color:var(--brand);}
@@ -130,14 +129,20 @@
         transform: translateX(var(--first-group-shift));
     }
 
-    @media (max-width: 1200px) and (min-width: 992px) {
+    @media (max-width: 1400px) and (min-width: 992px) {
         .nav-list { --first-group-shift: -60px; }
     }
+    @media (max-width: 1300px) and (min-width: 992px) {
+        .nav-list { --first-group-shift: -30px; gap: 4rem; }
+    }
+    @media (max-width: 1200px) and (min-width: 992px) {
+        .nav-list { --first-group-shift: 0; gap: 2.5rem; }
+    }
     @media (max-width: 1100px) and (min-width: 992px) {
-        .nav-list { --first-group-shift: -30px; }
+        .nav-list { gap: 1.5rem; }
     }
     @media (max-width: 1024px) and (min-width: 992px) {
-        .nav-list { --first-group-shift: 0; flex-wrap: wrap; gap: 0.75rem; }
+        .nav-list { flex-wrap: wrap; gap: 0.75rem; }
         .nav-list .nav-item:nth-child(-n+3) .nav-link { font-size: 20px; }
     }
 
@@ -399,13 +404,11 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
     }
 }
 
-
 /* Stile per l'immagine della freccetta */
 
 .img-freccetta {
   width: 15px;
   height: 15px;
-  /* Filtro per colorare l'SVG di blu #26547C */
   vertical-align: middle;
   margin-left: 4px;
 }
@@ -431,9 +434,6 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
 }
 
 /* Modulo Prenota */
-
-
-
 /* Stili per il selettore quantità (+ 0 -) */
 
 .qty-selector {
