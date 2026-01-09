@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/bootstrap-grid.css">
+    <!-- Font Outfit da Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>MIC Faenza - home</title>
+    <link rel="icon" href="imgs/logotipo_mic.svg" type="image/x-icon" />
+</head>
+<body>
+    <!-- Header -->
+<div class="header row m-0 p-0 align-items-center">
+        <div class="col-2 d-flex align-items-center">
+            <a href="#top">
+                <img src="imgs/logotipo_mic.svg" class="logo" alt="Logo">
+            </a>
+        </div>
+
+        <div class="col-9 d-flex justify-content-end align-items-center" style="position: static;">
+            
+            <div class="desktop-nav-container">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Visita</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Orari <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Biglietti <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Come arrivare <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Cosa vedere</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Le Collezioni <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Calendario eventi <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Info</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Chi siamo <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Dove siamo <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">News <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">CONSERVAZIONE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Depositi <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Restauri <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Progetti <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">RISORSE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Archivio Fotografico <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Biblioteca <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Rivista Faenza <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">SHOP</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Libri <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Gadget <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Merchandising <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mobile-header-elements">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">+</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="side-drawer" id="sideDrawer">
+        <button class="drawer-close" id="drawerClose" aria-label="Chiudi menu">✕</button>
+        <ul class="drawer-list">
+            
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Visita <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="#">Orari <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Biglietti <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Come arrivare <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Cosa vedere <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="#">Le Collezioni <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Calendario eventi <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Info <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="#">Chi siamo <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Dove siamo <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">News <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Conservazione <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="#">Depositi <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Progetti <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Restauri <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Risorse <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="#">Archivio Fotografico <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Biblioteca <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Rivista Faenza <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Shop <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="#">Libri <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Gadget <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Merchandising <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- Fine Header -->
+
+    <!-- Video a tutto schermo -->
+     <div class="video_home">
+        <video autoplay muted loop class="video_home">
+            <source src="imgs/video_home.mp4" type="video/mp4">
+        </video>
+     </div>
+    <!-- Fine Video a tutto schermo -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{const sideDrawer=document.getElementById('sideDrawer'),menuToggle=document.getElementById('menuToggle');document.addEventListener('click',e=>{const dt=e.target.closest('.dt-trigger');if(dt){e.preventDefault();e.stopPropagation();const menu=dt.nextElementSibling;document.querySelectorAll('.dropdown-menu.active').forEach(m=>{if(m!==menu)m.classList.remove('active')});document.querySelectorAll('.dt-trigger.active-state').forEach(t=>{if(t!==dt)t.classList.remove('active-state')});if(menu){menu.classList.toggle('active');dt.classList.toggle('active-state',menu.classList.contains('active'))}return}if(e.target.closest('#menuToggle')){e.stopPropagation();sideDrawer.classList.toggle('open');menuToggle.textContent=sideDrawer.classList.contains('open')?'-':'+';return}if(e.target.closest('.accordion-trigger')){e.preventDefault();const btn=e.target.closest('.accordion-trigger'),submenu=btn.nextElementSibling;if(submenu){submenu.classList.toggle('open');btn.querySelector('span').textContent=submenu.classList.contains('open')?'-':'+';btn.classList.toggle('active-color',submenu.classList.contains('open'))}return}if(e.target.closest('#drawerClose')){e.stopPropagation();sideDrawer.classList.remove('open');menuToggle.textContent='+';return}if(!e.target.closest('.nav-item')&&!e.target.closest('.mobile-nav-item')){document.querySelectorAll('.dropdown-menu.active').forEach(m=>m.classList.remove('active'));document.querySelectorAll('.dt-trigger.active-state').forEach(t=>t.classList.remove('active-state'))}if(sideDrawer.classList.contains('open')&&!sideDrawer.contains(e.target)&&!menuToggle.contains(e.target)){sideDrawer.classList.remove('open');menuToggle.textContent='+'}});});
+    </script>
+</body>
