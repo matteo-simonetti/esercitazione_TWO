@@ -38,6 +38,7 @@ html, body {
 
 .logo{
     padding-left: 30px;
+    height: 50px;
 }
 
 /* Responsivo: riduce spaziatura e dimensione font su schermi medi */
@@ -53,7 +54,9 @@ html, body {
 /* Schermi piccoli: permette il wrapping e impila verticalmente se necessario */
 @media (max-width: 576px) {
     .header{height:72px;}
-
+    .logo{
+    padding-left: 10px;
+    }
     .nav-list .nav-item:nth-child(n+4){
         display: none;
     }
