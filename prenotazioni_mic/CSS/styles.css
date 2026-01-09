@@ -825,10 +825,10 @@ p {
     transform: scale(1.1);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
-.cart-icon-placeholder {
-    width: 35px;
-    height: 35px;
-    background: var(--brand);
+.cart-icon{
+    width: 45px;
+    height: 45px;
+    background: transparent;
     border-radius: 4px;
 }
 .cart-badge {
