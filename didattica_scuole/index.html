@@ -26,9 +26,8 @@
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#" class="nav-link dt-trigger">Visita</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Orari <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
-                            <li><a href="#">Biglietti <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
-                            <li><a href="#">Come arrivare <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Prenota ora <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Didattica per le scuole <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link dt-trigger">Cosa vedere</a>
@@ -46,23 +45,23 @@
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link dt-trigger">CONSERVAZIONE</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Depositi <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
-                            <li><a href="#">Restauri <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
-                            <li><a href="#">Progetti <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#" style="font-size: 16px;">Depositi <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="#" style="font-size: 16px;">Restauri <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="#" style="font-size: 16px;">Progetti <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link dt-trigger">RISORSE</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Archivio Fotografico <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
-                            <li><a href="#">Biblioteca <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
-                            <li><a href="#">Rivista Faenza <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#" style="font-size: 16px;">Archivio Fotografico <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="#" style="font-size: 16px;">Biblioteca <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="#" style="font-size: 16px;">Rivista Faenza <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link dt-trigger">SHOP</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Libri <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
-                            <li><a href="#">Gadget <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
-                            <li><a href="#">Merchandising <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#" style="font-size: 16px;">Libri <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="#" style="font-size: 16px;">Gadget <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="#" style="font-size: 16px;">Merchandising <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -82,9 +81,8 @@
             <li class="drawer-item">
                 <a href="#" class="drawer-link accordion-trigger">Visita <span>+</span></a>
                 <ul class="drawer-submenu">
-                    <li><a href="#">Orari <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
-                    <li><a href="#">Biglietti <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
-                    <li><a href="#">Come arrivare <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Prenota ora <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Didattica per le scuole <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
                 </ul>
             </li>
 
@@ -507,10 +505,87 @@
 
       <script>
         // script header
-        document.addEventListener('DOMContentLoaded',()=>{const sideDrawer=document.getElementById('sideDrawer'),menuToggle=document.getElementById('menuToggle');document.addEventListener('click',e=>{const dt=e.target.closest('.dt-trigger');if(dt){e.preventDefault();e.stopPropagation();const menu=dt.nextElementSibling;document.querySelectorAll('.dropdown-menu.active').forEach(m=>{if(m!==menu)m.classList.remove('active')});document.querySelectorAll('.dt-trigger.active-state').forEach(t=>{if(t!==dt)t.classList.remove('active-state')});if(menu){menu.classList.toggle('active');dt.classList.toggle('active-state',menu.classList.contains('active'))}return}if(e.target.closest('#menuToggle')){e.stopPropagation();sideDrawer.classList.toggle('open');menuToggle.textContent=sideDrawer.classList.contains('open')?'-':'+';return}if(e.target.closest('.accordion-trigger')){e.preventDefault();const btn=e.target.closest('.accordion-trigger'),submenu=btn.nextElementSibling;if(submenu){submenu.classList.toggle('open');btn.querySelector('span').textContent=submenu.classList.contains('open')?'-':'+';btn.classList.toggle('active-color',submenu.classList.contains('open'))}return}if(e.target.closest('#drawerClose')){e.stopPropagation();sideDrawer.classList.remove('open');menuToggle.textContent='+';return}if(!e.target.closest('.nav-item')&&!e.target.closest('.mobile-nav-item')){document.querySelectorAll('.dropdown-menu.active').forEach(m=>m.classList.remove('active'));document.querySelectorAll('.dt-trigger.active-state').forEach(t=>t.classList.remove('active-state'))}if(sideDrawer.classList.contains('open')&&!sideDrawer.contains(e.target)&&!menuToggle.contains(e.target)){sideDrawer.classList.remove('open');menuToggle.textContent='+'}});});
-        // script toggle
+document.addEventListener('DOMContentLoaded',()=>{
+            const sideDrawer=document.getElementById('sideDrawer'),
+                  menuToggle=document.getElementById('menuToggle');
+            
+            document.addEventListener('click',e=>{
+                const dt=e.target.closest('.dt-trigger');
+                if(dt){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const menu=dt.nextElementSibling;
+                    
+                    // Chiudi tutti i menu aperti
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m=>{
+                        m.classList.remove('active');
+                    });
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t=>{
+                        t.classList.remove('active-state');
+                    });
+                    
+                    // Apri solo il menu cliccato
+                    if(menu){
+                        menu.classList.add('active');
+                        dt.classList.add('active-state');
+                    }
+                    return;
+                }
+                
+                if(e.target.closest('#menuToggle')){
+                    e.stopPropagation();
+                    sideDrawer.classList.toggle('open');
+                    menuToggle.textContent=sideDrawer.classList.contains('open')?'-':'+';
+                    return;
+                }
+                
+                if(e.target.closest('.accordion-trigger')){
+                    e.preventDefault();
+                    const btn=e.target.closest('.accordion-trigger'),
+                          submenu=btn.nextElementSibling;
+                    
+                    // Chiudi tutti i submenu aperti nel drawer
+                    document.querySelectorAll('.drawer-submenu.open').forEach(m=>{
+                        if(m !== submenu) {
+                            m.classList.remove('open');
+                            const parentBtn = m.previousElementSibling;
+                            if(parentBtn) {
+                                parentBtn.querySelector('span').textContent = '+';
+                                parentBtn.classList.remove('active-color');
+                            }
+                        }
+                    });
+                    
+                    // Toggle il submenu cliccato
+                    if(submenu){
+                        submenu.classList.toggle('open');
+                        btn.querySelector('span').textContent=submenu.classList.contains('open')?'-':'+';
+                        btn.classList.toggle('active-color',submenu.classList.contains('open'));
+                    }
+                    return;
+                }
+                
+                if(e.target.closest('#drawerClose')){
+                    e.stopPropagation();
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent='+';
+                    return;
+                }
+                
+                if(!e.target.closest('.nav-item')&&!e.target.closest('.mobile-nav-item')){
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m=>m.classList.remove('active'));
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t=>t.classList.remove('active-state'));
+                }
+                
+                if(sideDrawer.classList.contains('open')&&!sideDrawer.contains(e.target)&&!menuToggle.contains(e.target)){
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent='+';
+                }
+            });
+        }); 
+          // script toggle
        (function() {
-            // Seleziona elementi
+          // Seleziona elementi
             var toggle = document.getElementById('filterToggle');
             var switchEl = document.getElementById('toggleSwitch');
             var options = document.getElementById('filterOptions');
