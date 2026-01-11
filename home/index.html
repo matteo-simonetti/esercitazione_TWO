@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/bootstrap-grid.css">
-    <!-- Font Outfit da Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <title>MIC Faenza - home</title>
     <link rel="icon" href="imgs/logotipo_mic.svg" type="image/x-icon" />
+    <style>
+        /* CSS Aggiuntivo per correggere il carosello */
+        .carousel-track {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            flex-wrap: nowrap !important;
+        }
+        
+        /* Gestione larghezze fisse per lo scorrimento perfetto */
+        .carousel-item-col {
+            flex: 0 0 100%; /* Mobile: 1 per volta */
+            max-width: 100%;
+        }
+        
+        @media (min-width: 576px) {
+            .carousel-item-col {
+                flex: 0 0 50%; /* Tablet: 2 per volta */
+                max-width: 50%;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .carousel-item-col {
+                flex: 0 0 33.333333%; /* Desktop: 3 per volta */
+                max-width: 33.333333%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Header -->
+
     <div class="header row m-0 p-0 align-items-center">
         <div class="col-2 d-flex align-items-center">
             <a href="#top">
@@ -22,7 +51,7 @@
         </div>
 
         <div class="col-9 d-flex justify-content-end align-items-center" style="position: static;">
-            
+
             <div class="desktop-nav-container">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#" class="nav-link dt-trigger">Visita</a>
@@ -79,7 +108,7 @@
     <div class="side-drawer" id="sideDrawer">
         <button class="drawer-close" id="drawerClose" aria-label="Chiudi menu">✕</button>
         <ul class="drawer-list">
-            
+
             <li class="drawer-item">
                 <a href="#" class="drawer-link accordion-trigger">Visita <span>+</span></a>
                 <ul class="drawer-submenu">
@@ -134,96 +163,407 @@
             </li>
         </ul>
     </div>
-    <!-- Fine Header -->
-
-    <!-- Video a tutto schermo -->
-     <div class=" row m-0 p-0 g-0">
+    <div class="row m-0 p-0 g-0">
         <video autoplay muted loop class="video_home">
-<<<<<<< Updated upstream
             <source src="imgs/video_home.webm" type="video/webm" alt="video home, vaso che straborda">
-=======
-            <source src="imgs/video_home.mp4" type="video/mp4">
->>>>>>> Stashed changes
         </video>
-     </div>
-    <!-- Fine Video a tutto schermo -->
-    <!-- box di testo -->
-     <div class="row box_testo p-0 m-0 g-0 d-flex justify-content-center align-items-center">
+    </div>
+    <div class="row box_testo p-0 m-0 g-0 d-flex justify-content-center align-items-center">
         <div class="box_testo">
-        <h1 class="testo_h1">Museo Internazionale delle Ceramiche</h1>
+            <h1 class="testo_h1">Museo Internazionale delle Ceramiche</h1>
         </div>
-     </div>
+    </div>
 
-    <!-- container principale (incapsula tutti i moduli)-->
-      <div class="container-fluid my-5">
-        <h3 class="mb-4">Da non perdere</h3>
+    <div class="container-fluid py-5">
+        <div class="d-flex justify-content-between mb-4">
+            <h3 class="mb-0 me-3">Da non perdere</h3>
+            <p class="mb-0 voce_fianco">Calendario</p>
+        </div>
         <div class="row g-4 mb-5">
-
-              <!-- primo box -->
-
-            <div  class="col-12 col-sm-6 col-lg-4">
-              <div class="modulo-1">
-                <div class="modulo-1-img">
-                  <img src= "https://picsum.photos/600/400?random=10" alt="Modulo 1" />
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="modulo-4">
+                    <div class="modulo-4-text">
+                        <div class="modulo-4-date">29/11/2025 - 18/01/2026</div>
+                        <div class="modulo-4-title">Léa Renard, Double Jeu </div>
+                    </div>
+                    <div class="modulo-4-img">
+                        <img src="https://picsum.photos/400/340?random=20" alt="modulo 4" />
+                    </div>
                 </div>
-                <div class="modulo-1-text">
-                  <h4>Titolo</h4>
-                </div>
-              </div>
             </div>
-
-              <!-- secondo box -->
-
-            <div  class="col-12 col-sm-6 col-lg-4">
-              <div class="modulo-1">
-                <div class="modulo-1-img">
-                  <img src= "https://picsum.photos/600/400?random=10" alt="Modulo 1" />
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="modulo-4">
+                    <div class="modulo-4-text">
+                        <div class="modulo-4-date">29/11/2025 - 18/01/2026</div>
+                        <div class="modulo-4-title">Nuovo allestimento sezione Asia Orientale Jeu </div>
+                    </div>
+                    <div class="modulo-4-img">
+                        <img src="https://picsum.photos/400/340?random=21" alt="modulo 4" />
+                    </div>
                 </div>
-                <div class="modulo-1-text">
-                  <h4>Titolo</h4>
-                </div>
-              </div>
             </div>
-              
-            <!-- terzo box -->
-
-            <div  class="col-12 col-sm-6 col-lg-4">
-              <div class="modulo-1">
-                <div class="modulo-1-img">
-                  <img src="https://picsum.photos/600/400?random=10" alt="Modulo 1" />
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="modulo-4">
+                    <div class="modulo-4-text">
+                        <div class="modulo-4-date">Alchimia Ginori 1737-1896</div>
+                        <div class="modulo-4-title">Arte e tecnica in manifattura </div>
+                    </div>
+                    <div class="modulo-4-img">
+                        <img src="https://picsum.photos/400/340?random=22" alt="modulo 4" />
+                    </div>
                 </div>
-                <div class="modulo-1-text">
-                  <h4>Titolo </h4>
-                </div>
-              </div>
             </div>
         </div>
-      </div>
-      
-            <!-- Modulo 2 stanno fuori container-fluid -->
-
-      <h3 class="mb-4">Modulo 2</h3>
+    </div>
     <div class="modulo-2">
         <div class="row g-0 mb-5">
-          <div class="col-12 col-lg-7 order-2 order-lg-1">
-            <div class="modulo-2-content">
-              <h2>Titolo del Modulo 2</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div class="modulo-2-buttons">
-                <button class="btn-esplora">Esplora</button>
-                <button class="btn-prenota">Prenota</button>
-              </div>
+            <div class="col-12 col-lg-7 order-2 order-lg-1">
+                <div class="modulo-2-content">
+                    <h2>Didattica per le scuole</h2>
+                    <p class="testo_modulo_2_3">Offriamo visite guidate pensate per ogni fascia d'età, con percorsi personalizzati che rendono l'esperienza coinvolgente e formativa.</p>
+                    <div class="modulo-2-buttons">
+                        <button class="btn-prenota">Prenota la visita</button>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-5 order-1 order-lg-2 p-0">
-            <div class="modulo-2-img">
-              <img src="https://picsum.photos/600/400?random=10" alt="Modulo 2" />
+            <div class="col-12 col-lg-5 order-1 order-lg-2 p-0">
+                <div class="modulo-2-img">
+                    <img src="https://picsum.photos/600/400?random=10" alt="Modulo 2" />
+                </div>
             </div>
-          </div>
         </div>
-    </div>  
+    </div>
+    <div class="container-fluid py-5 carousel-container">
+        <div class="d-flex justify-content-between mb-4">
+            <h3 class="mb-0 me-3">Cosa vedere al M.I.C</h3>
+            <p class="mb-0 voce_fianco">Collezioni</p>
+        </div>
+
+        <button class="carousel-arrow carousel-arrow-left" id="carouselPrev1" aria-label="Precedente">
+            <img src="imgs/freccetta_carosello.svg" alt="" style="transform: rotate(180deg);">
+        </button>
+        <button class="carousel-arrow carousel-arrow-right" id="carouselNext1" aria-label="Successivo">
+            <img src="imgs/freccetta_carosello.svg" alt="">
+        </button>
+
+        <div class="carousel-wrapper" style="overflow: hidden; width: 100%;">
+            <div class="row g-4 mb-5 carousel-track" id="carouselTrack1">
+                <div class="col-12 col-sm-6 col-lg-4 carousel-item-col">
+                    <div class="modulo-4">
+                        <div class="modulo-4-text">
+                            <div class="modulo-4-date">01 Gen 2026 - 31 Gen 2026</div>
+                            <div class="modulo-4-title">Collezione Precolombiana</div>
+                        </div>
+                        <div class="modulo-4-img">
+                            <img src="https://picsum.photos/400/340?random=30" alt="modulo 4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 carousel-item-col">
+                    <div class="modulo-4">
+                        <div class="modulo-4-text">
+                            <div class="modulo-4-date">01 Gen 2026 - 31 Gen 2026</div>
+                            <div class="modulo-4-title">Ceramiche Orientali</div>
+                        </div>
+                        <div class="modulo-4-img">
+                            <img src="https://picsum.photos/400/340?random=31" alt="modulo 4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 carousel-item-col">
+                    <div class="modulo-4">
+                        <div class="modulo-4-text">
+                            <div class="modulo-4-date">01 Gen 2026 - 31 Gen 2026</div>
+                            <div class="modulo-4-title">Arte Contemporanea</div>
+                        </div>
+                        <div class="modulo-4-img">
+                            <img src="https://picsum.photos/400/340?random=32" alt="modulo 4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 carousel-item-col">
+                    <div class="modulo-4">
+                        <div class="modulo-4-text">
+                            <div class="modulo-4-date">01 Gen 2026 - 31 Gen 2026</div>
+                            <div class="modulo-4-title">Maioliche Rinascimentali</div>
+                        </div>
+                        <div class="modulo-4-img">
+                            <img src="https://picsum.photos/400/340?random=33" alt="modulo 4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 carousel-item-col">
+                    <div class="modulo-4">
+                        <div class="modulo-4-text">
+                            <div class="modulo-4-date">01 Gen 2026 - 31 Gen 2026</div>
+                            <div class="modulo-4-title">Porcellane Europee</div>
+                        </div>
+                        <div class="modulo-4-img">
+                            <img src="https://picsum.photos/400/340?random=34" alt="modulo 4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 carousel-item-col">
+                    <div class="modulo-4">
+                        <div class="modulo-4-text">
+                            <div class="modulo-4-date">01 Gen 2026 - 31 Gen 2026</div>
+                            <div class="modulo-4-title">Ceramica Moderna</div>
+                        </div>
+                        <div class="modulo-4-img">
+                            <img src="https://picsum.photos/400/340?random=35" alt="modulo 4" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modulo-2">
+        <div class="row g-0 mb-5">
+            <div class="col-12 col-lg-7 order-2 order-lg-1">
+                <div class="modulo-2-content">
+                    <h2>Entra nel virtual tour</h2>
+                    <p class="testo_modulo_2_3">Vivi un'esperienza immersiva e interattiva grazie al tour digitale che ti permette di muoverti liberamente tra le sale, scoprire le collezioni da ogni angolazione e accedere a contenuti extra.</p>
+                    <div class="modulo-2-buttons">
+                        <button class="btn-esplora">Scopra di più</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5 order-1 order-lg-2 p-0">
+                <div class="modulo-2-img">
+                    <img src="https://picsum.photos/600/400?random=10" alt="Modulo 2" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modulo-3">
+        <div class="row g-0 mb-5">
+            <div class="col-12 col-lg-5 order-1 p-0">
+                <div class="modulo-3-img">
+                    <img src="https://picsum.photos/600/400?random=11" alt="Modulo 3" />
+                </div>
+            </div>
+            <div class="col-12 col-lg-7 order-2">
+                <div class="modulo-3-content">
+                    <h2>Prosegui la tua visita a Faenza</h2>
+                    <p class="testo_modulo_2_3">Arricchisci la tua visita al museo con tante esperienze nel territorio: una selezione di luoghi, attività e consigli utili per vivere al meglio il tuo viaggio e scoprire tutto ciò che la città ha da offrire.</p>
+                    <div class="modulo-3-buttons">
+                        <button class="btn-esplora">Scopri di più</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5 carousel-container">
+        <div class="d-flex justify-content-between mb-4">
+            <h3 class="mb-0 me-3">Ultime notizie</h3>
+            <p class="mb-0 voce_fianco">News</p>
+        </div>
+
+        <button class="carousel-arrow carousel-arrow-left" id="carouselPrev2" aria-label="Precedente">
+            <img src="imgs/freccetta_carosello.svg" alt="" style="transform: rotate(180deg);">
+        </button>
+        <button class="carousel-arrow carousel-arrow-right" id="carouselNext2" aria-label="Successivo">
+            <img src="imgs/freccetta_carosello.svg" alt="">
+        </button>
+
+        <div class="carousel-wrapper" style="overflow: hidden; width: 100%;">
+            <div class="row g-4 mb-5 carousel-track" id="carouselTrack2">
+                <div class="col-12 col-sm-6 col-lg-4 carousel-item-col">
+                    <div class="modulo-4">
+                        <div class="modulo-4-text">
+                            <div class="modulo-4-date">05 Gen 2026</div>
+                            <div class="modulo-4-title">Nuovo restauro completato</div>
+                        </div>
+                        <div class="modulo-4-img">
+                            <img src="https://picsum.photos/400/340?random=40" alt="modulo 4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 carousel-item-col">
+                    <div class="modulo-4">
+                        <div class="modulo-4-text">
+                            <div class="modulo-4-date">03 Gen 2026</div>
+                            <div class="modulo-4-title">Inaugurazione sala moderna</div>
+                        </div>
+                        <div class="modulo-4-img">
+                            <img src="https://picsum.photos/400/340?random=41" alt="modulo 4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 carousel-item-col">
+                    <div class="modulo-4">
+                        <div class="modulo-4-text">
+                            <div class="modulo-4-date">28 Dic 2025</div>
+                            <div class="modulo-4-title">Workshop ceramica giapponese</div>
+                        </div>
+                        <div class="modulo-4-img">
+                            <img src="https://picsum.photos/400/340?random=42" alt="modulo 4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 carousel-item-col">
+                    <div class="modulo-4">
+                        <div class="modulo-4-text">
+                            <div class="modulo-4-date">20 Dic 2025</div>
+                            <div class="modulo-4-title">Conferenza arte ceramica</div>
+                        </div>
+                        <div class="modulo-4-img">
+                            <img src="https://picsum.photos/400/340?random=43" alt="modulo 4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 carousel-item-col">
+                    <div class="modulo-4">
+                        <div class="modulo-4-text">
+                            <div class="modulo-4-date">15 Dic 2025</div>
+                            <div class="modulo-4-title">Mostra fotografica ceramisti</div>
+                        </div>
+                        <div class="modulo-4-img">
+                            <img src="https://picsum.photos/400/340?random=44" alt="modulo 4" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 carousel-item-col">
+                    <div class="modulo-4">
+                        <div class="modulo-4-text">
+                            <div class="modulo-4-date">10 Dic 2025</div>
+                            <div class="modulo-4-title">Visita guidata notturna</div>
+                        </div>
+                        <div class="modulo-4-img">
+                            <img src="https://picsum.photos/400/340?random=45" alt="modulo 4" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded',()=>{const sideDrawer=document.getElementById('sideDrawer'),menuToggle=document.getElementById('menuToggle');document.addEventListener('click',e=>{const dt=e.target.closest('.dt-trigger');if(dt){e.preventDefault();e.stopPropagation();const menu=dt.nextElementSibling;document.querySelectorAll('.dropdown-menu.active').forEach(m=>{if(m!==menu)m.classList.remove('active')});document.querySelectorAll('.dt-trigger.active-state').forEach(t=>{if(t!==dt)t.classList.remove('active-state')});if(menu){menu.classList.toggle('active');dt.classList.toggle('active-state',menu.classList.contains('active'))}return}if(e.target.closest('#menuToggle')){e.stopPropagation();sideDrawer.classList.toggle('open');menuToggle.textContent=sideDrawer.classList.contains('open')?'-':'+';return}if(e.target.closest('.accordion-trigger')){e.preventDefault();const btn=e.target.closest('.accordion-trigger'),submenu=btn.nextElementSibling;if(submenu){submenu.classList.toggle('open');btn.querySelector('span').textContent=submenu.classList.contains('open')?'-':'+';btn.classList.toggle('active-color',submenu.classList.contains('open'))}return}if(e.target.closest('#drawerClose')){e.stopPropagation();sideDrawer.classList.remove('open');menuToggle.textContent='+';return}if(!e.target.closest('.nav-item')&&!e.target.closest('.mobile-nav-item')){document.querySelectorAll('.dropdown-menu.active').forEach(m=>m.classList.remove('active'));document.querySelectorAll('.dt-trigger.active-state').forEach(t=>t.classList.remove('active-state'))}if(sideDrawer.classList.contains('open')&&!sideDrawer.contains(e.target)&&!menuToggle.contains(e.target)){sideDrawer.classList.remove('open');menuToggle.textContent='+'}});});
+        document.addEventListener('DOMContentLoaded', () => {
+            const sideDrawer = document.getElementById('sideDrawer'),
+                menuToggle = document.getElementById('menuToggle');
+            document.addEventListener('click', e => {
+                const dt = e.target.closest('.dt-trigger');
+                if (dt) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const menu = dt.nextElementSibling;
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m => {
+                        if (m !== menu) m.classList.remove('active')
+                    });
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t => {
+                        if (t !== dt) t.classList.remove('active-state')
+                    });
+                    if (menu) {
+                        menu.classList.toggle('active');
+                        dt.classList.toggle('active-state', menu.classList.contains('active'))
+                    }
+                    return
+                }
+                if (e.target.closest('#menuToggle')) {
+                    e.stopPropagation();
+                    sideDrawer.classList.toggle('open');
+                    menuToggle.textContent = sideDrawer.classList.contains('open') ? '-' : '+';
+                    return
+                }
+                if (e.target.closest('.accordion-trigger')) {
+                    e.preventDefault();
+                    const btn = e.target.closest('.accordion-trigger'),
+                        submenu = btn.nextElementSibling;
+                    if (submenu) {
+                        submenu.classList.toggle('open');
+                        btn.querySelector('span').textContent = submenu.classList.contains('open') ? '-' : '+';
+                        btn.classList.toggle('active-color', submenu.classList.contains('open'))
+                    }
+                    return
+                }
+                if (e.target.closest('#drawerClose')) {
+                    e.stopPropagation();
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent = '+';
+                    return
+                }
+                if (!e.target.closest('.nav-item') && !e.target.closest('.mobile-nav-item')) {
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m => m.classList.remove('active'));
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t => t.classList.remove('active-state'))
+                }
+                if (sideDrawer.classList.contains('open') && !sideDrawer.contains(e.target) && !menuToggle.contains(e.target)) {
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent = '+'
+                }
+            });
+
+            // Funzione riutilizzabile per il loop infinito 1-by-1
+            function initInfiniteCarousel(trackId, prevBtnId, nextBtnId) {
+                const track = document.getElementById(trackId);
+                const prevBtn = document.getElementById(prevBtnId);
+                const nextBtn = document.getElementById(nextBtnId);
+                let isAnimating = false;
+
+                // Calcola larghezza di UN singolo item per volta
+                const getSingleItemWidth = () => {
+                    const item = track.querySelector('.carousel-item-col');
+                    return item ? item.getBoundingClientRect().width : 0;
+                };
+
+                nextBtn.addEventListener('click', () => {
+                    if (isAnimating) return;
+                    isAnimating = true;
+
+                    const itemWidth = getSingleItemWidth();
+                    const item = track.firstElementChild;
+
+                    // 1. Anima verso sinistra di ESATTAMENTE un elemento
+                    track.style.transition = 'transform 0.3s ease';
+                    track.style.transform = `translateX(-${itemWidth}px)`;
+
+                    // 2. Alla fine dell'animazione, sposta fisicamente il primo elemento in fondo
+                    track.addEventListener('transitionend', () => {
+                        track.style.transition = 'none'; // Disabilita animazione per lo spostamento immediato
+                        track.appendChild(item); // Sposta il primo elemento in fondo
+                        track.style.transform = 'translateX(0)'; // Resetta la posizione
+                        // Piccola pausa per permettere al browser di registrare il reset
+                        setTimeout(() => {
+                            isAnimating = false;
+                        }, 0);
+                    }, {
+                        once: true
+                    });
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    if (isAnimating) return;
+                    isAnimating = true;
+
+                    const itemWidth = getSingleItemWidth();
+                    const item = track.lastElementChild;
+
+                    // 1. Sposta l'ultimo elemento all'inizio IMMEDIATAMENTE
+                    track.style.transition = 'none';
+                    track.prepend(item);
+                    // 2. Sposta il track indietro per compensare l'inserimento
+                    track.style.transform = `translateX(-${itemWidth}px)`;
+
+                    // Forza il browser a ricalcolare il layout (Reflow)
+                    void track.offsetWidth;
+
+                    // 3. Anima verso 0 (destra visiva)
+                    track.style.transition = 'transform 0.3s ease';
+                    track.style.transform = 'translateX(0)';
+
+                    track.addEventListener('transitionend', () => {
+                        isAnimating = false;
+                    }, {
+                        once: true
+                    });
+                });
+            }
+
+            // Inizializza i due caroselli
+            initInfiniteCarousel('carouselTrack1', 'carouselPrev1', 'carouselNext1');
+            initInfiniteCarousel('carouselTrack2', 'carouselPrev2', 'carouselNext2');
+        });
     </script>
 </body>
+
+</html>
