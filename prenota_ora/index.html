@@ -474,7 +474,31 @@
                 }
             });
         });
+        
+        // MIC CARD info toggle (mobile) — simplified and accessible
+        (function(){
+            const btn = document.querySelector('.mic-info-btn');
+            const info = document.querySelector('.mic-card-info');
+            if (!btn || !info) return;
 
+            const setOpen = (open) => {
+                info.classList.toggle('open', open);
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            };
+
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation(); // prevent document handler from immediately closing it
+                setOpen(!info.classList.contains('open'));
+            });
+
+            // Close when clicking outside or pressing Escape
+            document.addEventListener('click', (e) => {
+                if (!info.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && info.classList.contains('open')) setOpen(false);
+            });
+        })();
         // Cart functions
         function addToCart(name, price) {
             const existing = cart.find(item => item.name === name);
@@ -583,32 +607,6 @@
             }
         });
 
-        // MIC CARD info toggle (mobile) — ensure handler exists and add debug log
-        (function(){
-            const micInfoBtn = document.querySelector('.mic-info-btn');
-            const micInfo = document.querySelector('.mic-card-info');
-            if(micInfoBtn && micInfo){
-                micInfoBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    console.log('MIC INFO toggle clicked');
-                    micInfo.classList.toggle('open');
-                    const expanded = micInfo.classList.contains('open');
-                    micInfoBtn.setAttribute('aria-expanded', expanded);
-                });
-
-                // Close when clicking outside (mobile)
-                document.addEventListener('click', (e) => {
-                    if (micInfo.classList.contains('open')) {
-                        if (!e.target.closest('.mic-card-info') && !e.target.closest('.mic-info-btn')) {
-                            micInfo.classList.remove('open');
-                            micInfoBtn.setAttribute('aria-expanded', 'false');
-                        }
-                    }
-                });
-            } else {
-                console.log('MIC INFO elements not found:', {micInfoBtn, micInfo});
-            }
-        })();
 
         // Make deleteFromCart available globally for inline onclick
         window.deleteFromCart = deleteFromCart;
