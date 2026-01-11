@@ -1015,3 +1015,44 @@ p {
         width: 100vw;
     }
 }
+
+/* MIC CARD info button (mobile) */
+.mic-info-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--brand);
+    color: var(--brand);
+    background: transparent;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 8px;
+    cursor: pointer;
+    /* align bottom of the circle with the text baseline */
+    vertical-align: text-bottom;
+    line-height: 1;
+    transform: translateY(-4px);
+}
+.mic-info-btn:focus { outline: 2px solid rgba(38,84,124,0.2); border-radius: 50%; }
+
+.mic-card-info { display: none; }
+.mic-card-info.open {
+    display: block;
+    padding: 12px;
+    background: #f8fafb;
+    border: 1px solid #e6eef5;
+    border-radius: 6px;
+    margin-top: 8px;
+    color: var(--brand);
+}
+
+/* On desktop show info by default and hide the small info button */
+@media (min-width: 992px) {
+    .mic-info-btn { display: none; }
+    .mic-card-info { display: block; padding: 0; background: transparent; border: none; }
+    /* Nudge the desktop add-to-cart for MIC CARD slightly to the right */
+    .mic-card-btn { margin-left: 12px; }
+}
