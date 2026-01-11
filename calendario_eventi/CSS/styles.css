@@ -1050,3 +1050,10 @@ p {
             color: #26547C;
             margin-bottom: 10px;
         }
+
+      .modulo-calendario-titolo{
+        font-weight: 800;
+      }
+      .modulo-calendario-data{
+        font-weight: 600;
+      }
