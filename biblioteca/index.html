@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <title>MIC Faenza - prenota ora</title>
+    <title>MIC Faenza - Biblioteca</title>
     <link rel="icon" href="imgs/logotipo_mic.svg" type="image/x-icon" />
 </head>
 <body>
@@ -142,38 +142,31 @@
                 <p class="testo_lungo padding-bottom-56">La nostra biblioteca è un punto di riferimento prezioso per ricercatori, studiosi, artisti, studenti e critici d’arte. Possiede oltre 70.000 tra volumi e opuscoli dedicati alla ceramica e all’arte in generale. Conserva inoltre la Fototeca della Ceramica, voluta dal fondatore del MIC Gaetano Ballardini nel 1927, come strumento di documentazione iconografica delle opere in ceramica conservate nelle collezioni pubbliche e private di tutto il mondo.</p>
             </div>
     </div>
-    <div class="immagine_biblioteca padding-bottom-56">
-    <img src="imgs/biblioteca.webp" alt="Immagine Biblioteca" class="img-fluid padding-bottom-56 p-0 m-0 g-0 immagine_biblioteca">
+    <div class="padding-bottom-56 immagine_biblioteca">
+    <img src="imgs/biblioteca.webp" alt="Immagine Biblioteca" class="img-fluid">
     </div>
     <div class="container-fluid p-0">
         <h4 class="maiuscoletto padding-bottom-56">Orari</h4>
         <p class="maiuscoletto"> >Martedì - Mercoledì - Giovedì:</p>
         <p class="padding-bottom-56">9:00 - 13:00</p>
         <h4 class="maiuscoletto padding-bottom-56">Servizi al pubblico</h4>
-        <ul>Il lettore troverà una postazione con personale al quale potrà rivolgersi per: <br>
-            <li class="fix">informazioni bibliografiche e di altro genere riguardanti le raccolte e collezioni</li>
-            <li class="fix">assistenza nella ricerche nei vari tipi di catalogo</li>
-            <li class="fix">consultazione delle basi dati</li>
-            <li class="fix">fotocopie (bianco/nero e colori)</li>
+        <ul>Il lettore troverà una postazione con personale al quale potrà rivolgersi per:
+            <li class="fix">Informazioni bibliografiche e di altro genere riguardanti le raccolte e collezioni</li>
+            <li class="fix">Assistenza nella ricerche nei vari tipi di catalogo</li>
+            <li class="fix">Consultazione delle basi dati</li>
+            <li class="fix">Fotocopie (bianco/nero e colori)</li>
         </ul>
         <p class="padding-bottom-28"><br>non è consentito il prestito esterno.</p>
     <div class="modulo-2-buttons padding-bottom-56">
-        <button class="btn-esplora">Prenota il tuo posto</button>
+        <button class="btn-generico">Prenota il tuo posto</button>
     </div>
             <h4 class="maiuscoletto padding-bottom-56">Cerchi un libro?</h4>
         <p class="padding-bottom-28">La nostra Biblioteca fa parte della Rete bibliotecaria di Romagna e San Marino. <br>
         La ricerca delle pubblicazioni tramite il catalogo online è semplice: seleziona la nostra biblioteca <strong>“FAENZA (RA)_Museo int.le delle ceramiche”</strong>, inserisci i parametri di ricerca e scopri le nostre raccolte!</p>
     <div class="modulo-2-buttons">
-        <button class="btn-esplora">Ricerca Risorse Online</button>
+        <button class="btn-generico">Ricerca Risorse Online</button>
     </div>
-
     </div>
-
-
-    
-
-
-
     <script>
         document.addEventListener('DOMContentLoaded',()=>{const sideDrawer=document.getElementById('sideDrawer'),menuToggle=document.getElementById('menuToggle');document.addEventListener('click',e=>{const dt=e.target.closest('.dt-trigger');if(dt){e.preventDefault();e.stopPropagation();const menu=dt.nextElementSibling;document.querySelectorAll('.dropdown-menu.active').forEach(m=>{if(m!==menu)m.classList.remove('active')});document.querySelectorAll('.dt-trigger.active-state').forEach(t=>{if(t!==dt)t.classList.remove('active-state')});if(menu){menu.classList.toggle('active');dt.classList.toggle('active-state',menu.classList.contains('active'))}return}if(e.target.closest('#menuToggle')){e.stopPropagation();sideDrawer.classList.toggle('open');menuToggle.textContent=sideDrawer.classList.contains('open')?'-':'+';return}if(e.target.closest('.accordion-trigger')){e.preventDefault();const btn=e.target.closest('.accordion-trigger'),submenu=btn.nextElementSibling;if(submenu){submenu.classList.toggle('open');btn.querySelector('span').textContent=submenu.classList.contains('open')?'-':'+';btn.classList.toggle('active-color',submenu.classList.contains('open'))}return}if(e.target.closest('#drawerClose')){e.stopPropagation();sideDrawer.classList.remove('open');menuToggle.textContent='+';return}if(!e.target.closest('.nav-item')&&!e.target.closest('.mobile-nav-item')){document.querySelectorAll('.dropdown-menu.active').forEach(m=>m.classList.remove('active'));document.querySelectorAll('.dt-trigger.active-state').forEach(t=>t.classList.remove('active-state'))}if(sideDrawer.classList.contains('open')&&!sideDrawer.contains(e.target)&&!menuToggle.contains(e.target)){sideDrawer.classList.remove('open');menuToggle.textContent='+'}});});
     </script>
