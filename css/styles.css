@@ -415,7 +415,18 @@ html, body {
   vertical-align: middle;
   margin-left: 4px;
 }
-
+.img-freccetta-h3 {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.img-freccetta-h4 {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-left: 4px;
+}
 
 /* Classi di padding */
 
