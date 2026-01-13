@@ -548,17 +548,23 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
 }
 .btn-esplora,
 .btn-prenota {
-  border: none;
+  background: none;
+  border: 1px solid #FFFDEE;
   cursor: pointer;
-  padding: 10px 24px;
+  padding: 10px;
+  font-size: 24px;
+  color: #FFFDEE;
 }
-.btn-esplora {
-  background: white;
+.btn-prenota:hover {
+  background: #FFFDEE;
   color: #26547C;
 }
-.btn-prenota {
-  background: transparent;
-  border: 2px solid white;
+.btn-esplora:hover {
+  background: #FFFDEE;
+  color: #26547C;
+}
+.btn-generico:hover {
+  background: #26547C;
   color: white;
 }
 
@@ -674,7 +680,7 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
     padding: 8px;
     font-size: 20px;
   }
-
+  
   .padding-top-h1 {
     padding-top: 56px;
 }

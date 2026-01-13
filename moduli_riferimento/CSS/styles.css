@@ -1,17 +1,8 @@
-:root {
-  /* Desktop: Gutter 30px */
-  --bs-gutter-x: 30px;
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
 }
-
-  body {
-  font-family: Outfit, sans-serif !important;
-  color: #26547C;
-  margin: 0;
-  padding: 0;
-}
-
-/* HEADER */
-
 :root{--brand:#26547C;--accent:#FFE66D;--accent-hover:#FFF39A;--drawer-bg:#1e4466}
 
 .header{height:115px;background-color:var(--brand);}
@@ -130,14 +121,20 @@
         transform: translateX(var(--first-group-shift));
     }
 
-    @media (max-width: 1200px) and (min-width: 992px) {
+    @media (max-width: 1400px) and (min-width: 992px) {
         .nav-list { --first-group-shift: -60px; }
     }
+    @media (max-width: 1300px) and (min-width: 992px) {
+        .nav-list { --first-group-shift: -30px; gap: 4rem; }
+    }
+    @media (max-width: 1200px) and (min-width: 992px) {
+        .nav-list { --first-group-shift: 0; gap: 2.5rem; }
+    }
     @media (max-width: 1100px) and (min-width: 992px) {
-        .nav-list { --first-group-shift: -30px; }
+        .nav-list { gap: 1.5rem; }
     }
     @media (max-width: 1024px) and (min-width: 992px) {
-        .nav-list { --first-group-shift: 0; flex-wrap: wrap; gap: 0.75rem; }
+        .nav-list { flex-wrap: wrap; gap: 0.75rem; }
         .nav-list .nav-item:nth-child(-n+3) .nav-link { font-size: 20px; }
     }
 
@@ -400,17 +397,6 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
 }
 
 
-/* Stile per l'immagine della freccetta */
-
-.img-freccetta {
-  width: 15px;
-  height: 15px;
-  /* Filtro per colorare l'SVG di blu #26547C */
-  vertical-align: middle;
-  margin-left: 4px;
-}
-
-
 /* Classi di padding */
 
 .padding-top-h1 {
@@ -454,10 +440,11 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
 }
 .btn-qty {
   background: none;
-  border: 1px solid #26547C;
+  border: 1px solid #FFFDEE;
   cursor: pointer;
-  height: 30px;
-  width: 30px;
+  padding: 10px;
+  font-size: 24px;
+  color: #FFFDEE;
 }
 
 /* CLASSI PER BOTTONI GENERICI */
@@ -467,7 +454,6 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
   border: 1px solid #26547C;
   cursor: pointer;
   padding: 10px;
-  font-family: outfit, sans-serif !important;
   font-size: 24px;
   color: #26547C;
 }
@@ -562,17 +548,23 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
 }
 .btn-esplora,
 .btn-prenota {
-  border: none;
+  background: none;
+  border: 1px solid #FFFDEE;
   cursor: pointer;
-  padding: 10px 24px;
+  padding: 10px;
+  font-size: 24px;
+  color: #FFFDEE;
 }
-.btn-esplora {
-  background: white;
+.btn-prenota:hover {
+  background: #FFFDEE;
   color: #26547C;
 }
-.btn-prenota {
-  background: transparent;
-  border: 2px solid white;
+.btn-esplora:hover {
+  background: #FFFDEE;
+  color: #26547C;
+}
+.btn-generico:hover {
+  background: #26547C;
   color: white;
 }
 
@@ -588,9 +580,11 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
   height: 100px;
   padding-left: 10px;
   padding-top: 10px;
+  font-size: 22px;
 }
 .modulo-4-date {
   margin-bottom: 8px;
+  font-size: 16px;
 }
 .modulo-4-img {
   background: #ddd;
@@ -686,20 +680,10 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
     padding: 8px;
     font-size: 20px;
   }
-
-  .modulo-calendario-img {
-    background: #ddd;
-    height: 200px;
-    overflow: hidden;
-  }
-  .modulo-calendario-img img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
-    .padding-top-h1 {
-      padding-top: 56px;
-  }
+  
+  .padding-top-h1 {
+    padding-top: 56px;
+}
 
   .desktop-only {
     display: none !important;
@@ -734,28 +718,16 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
     padding-left: calc((100vw - (100vw - 60px)) / 2);
     padding-right: 15px;
   }
-}
-
-  .modulo-4 {
-  background: #26547C;
-  height: 340px;
-  overflow: hidden;
-  color: white;
-}
-
-  .modulo-4-img {
-    background: #ddd;
-    height: 240px;
-    overflow: hidden;
+  .testo_h1{
+    margin-left: 35px;
   }
-  .modulo-4-img img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
+}
 @media (max-width: 767.98px) {
   .btn-mostra-piu {
     padding: 10px 24px;
+  }
+  .testo_h1{
+    margin-left: 35px;
   }
 }
 @media (max-width: 991px) {
@@ -790,6 +762,9 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
   .modulo-3-content {
     padding-left: calc((100vw - (100vw - 200px)) / 2);
     padding-right: 15px;
+  }
+.testo_h1{
+    margin-left: 105px;
   }
 }
 /* Nuove classi font */
@@ -828,29 +803,108 @@ p {
 .maiuscoletto {
   font-variant: small-caps;
 }
-
-ul li {
-  list-style: none;
+.pattern_1{
+  width: 100%;
+}
+.video_home {
   position: relative;
-  padding-left: 35px; /* Spazio per l'SVG */
-  margin-bottom: 16px; /* Distanza tra gli elementi */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
-ul li:last-child {
-  margin-bottom: 0; /* Rimuove il margine dall'ultimo elemento */
+.box_testo{
+  background-color: #26547C;
+  width: 100%;
 }
-ul li:first-child {
-  margin-top: 28px; /* Rimuove il margine dall'ultimo elemento */
+.testo_h1{
+  color: white;
+  font-size: 48px;
 }
-ul li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 8px; /* Regola per allineamento verticale */
-  width: 20px;
-  height: 20px;
-  background-image: url('../imgs/pallino_li.svg'); /* Sostituisci con il tuo SVG */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+
+h3{
+  color: #26547C;
 }
+
+.voce_fianco{
+color: #26547C;
+line-height: 45px;
+}
+.voce_fianco:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.testo_modulo_2_3{
+  font-weight: 300;
+  line-height: 35px;
+  margin-top: 20px;
+  margin-bottom: 28px;
+}
+/* Stili Carousel Modulo 4 */
+        .carousel-container {
+            position: relative
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: calc(50% + 20px);
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+            padding: 0
+        }
+
+        .carousel-arrow-left {
+            left: -75px
+        }
+
+        .carousel-arrow-right {
+            right: -75px
+        }
+
+        .carousel-arrow img {
+            display: block;
+            width: 33px;
+            height: 66px
+        }
+
+        .carousel-wrapper {
+            position: relative
+        }
+
+        .carousel-track {
+            transition: transform 0.3s ease;
+            flex-wrap: nowrap
+        }
+
+        @media (max-width: 991px) {
+            .carousel-arrow-left {
+                left: -75px
+            }
+
+            .carousel-arrow-right {
+                right: -75px
+            }
+        }
+
+        @media (max-width: 575px) {
+            .carousel-arrow {
+                top: calc(50% + 10px)
+            }
+
+            .carousel-arrow img {
+                width: 25px;
+                height: 50px
+            }
+
+            .carousel-arrow-left {
+                left: -25px
+            }
+
+            .carousel-arrow-right {
+                right: -25px
+            }
+        }
