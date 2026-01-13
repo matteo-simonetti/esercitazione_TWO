@@ -840,6 +840,12 @@ p {
   color: white;
 }
 
+.lista {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 32px;
+}
+
 .lista ul li {
   list-style: none;
   position: relative;
@@ -851,7 +857,7 @@ p {
   margin-bottom: 28px; /* Rimuove il margine dall'ultimo elemento */
 }
 .lista ul li:first-child {
-  margin-top: 28px; /* Rimuove il margine dall'ultimo elemento */
+  margin-top: 28px; /* Rimuove il margine dal primo elemento */
 }
 
 .lista ul li::before {
