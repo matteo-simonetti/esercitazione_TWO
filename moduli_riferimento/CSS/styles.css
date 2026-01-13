@@ -551,7 +551,7 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
   color: white;
   display: flex;
   flex-direction: column;
-  height: 400px;
+  min-height: 400px;
   padding: 50px 15px 40px 15px;
 }
 .modulo-2-buttons,
@@ -828,6 +828,7 @@ p {
 .maiuscoletto {
   font-variant: small-caps;
 }
+
 ul li {
   list-style: none;
   position: relative;

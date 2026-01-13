@@ -440,10 +440,11 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
 }
 .btn-qty {
   background: none;
-  border: 1px solid #26547C;
+  border: 1px solid #FFFDEE;
   cursor: pointer;
-  height: 30px;
-  width: 30px;
+  padding: 10px;
+  font-size: 24px;
+  color: #FFFDEE;
 }
 
 /* CLASSI PER BOTTONI GENERICI */
@@ -453,7 +454,6 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
   border: 1px solid #26547C;
   cursor: pointer;
   padding: 10px;
-  font-family: outfit, sans-serif !important;
   font-size: 24px;
   color: #26547C;
 }
@@ -537,7 +537,7 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
   color: white;
   display: flex;
   flex-direction: column;
-  height: 400px;
+  min-height: 400px;
   padding: 50px 15px 40px 15px;
 }
 .modulo-2-buttons,
@@ -574,9 +574,11 @@ a { text-decoration: none; color: white; transition: all 0.3s ease; }
   height: 100px;
   padding-left: 10px;
   padding-top: 10px;
+  font-size: 22px;
 }
 .modulo-4-date {
   margin-bottom: 8px;
+  font-size: 16px;
 }
 .modulo-4-img {
   background: #ddd;
@@ -818,6 +820,7 @@ p {
 h3{
   color: #26547C;
 }
+
 .voce_fianco{
 color: #26547C;
 line-height: 45px;
@@ -830,6 +833,7 @@ line-height: 45px;
   font-weight: 300;
   line-height: 35px;
   margin-top: 20px;
+  margin-bottom: 28px;
 }
 /* Stili Carousel Modulo 4 */
         .carousel-container {
