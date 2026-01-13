@@ -839,7 +839,7 @@ p {
 }
 
 ul li:last-child {
-  margin-bottom: 0; /* Rimuove il margine dall'ultimo elemento */
+  margin-bottom: 28px; /* Rimuove il margine dall'ultimo elemento */
 }
 ul li:first-child {
   margin-top: 28px; /* Rimuove il margine dall'ultimo elemento */
