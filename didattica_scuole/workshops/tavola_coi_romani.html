@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.css">
+    <!-- Font Outfit da Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>MIC Faenza - Didattica per le scuole</title>
+    <link rel="icon" href="../../imgs/logotipo_mic.svg" type="image/x-icon" />
+</head>
+<body>
+    <div class="header row m-0 p-0 align-items-center">
+        <div class="col-2 d-flex align-items-center">
+            <a href="../../index.html">
+                <img src="../../imgs/logotipo_mic.svg" class="logo" alt="Logo">
+            </a>
+        </div>
+
+        <div class="col-9 d-flex justify-content-end align-items-center" style="position: static;">
+            
+            <div class="desktop-nav-container">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Visita</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../prenota_ora/index.html">Prenota ora <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../index.html">Didattica per le scuole <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Cosa vedere</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../le_collezioni/index.html">Le Collezioni <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../../calendario_eventi/index.html">Calendario eventi <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Info</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../chi_siamo/index.html">Chi siamo <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../../dove_siamo/index.html">Dove siamo <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../../news/index.html">News <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">CONSERVAZIONE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../depositi/index.html" style="font-size: 16px;">Depositi<img src="../../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../../restauri/index.html" style="font-size: 16px;">Restauri<img src="../../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../../progetti/index.html" style="font-size: 16px;">Progetti<img src="../../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">RISORSE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../archivio_fotografico/index.html" style="font-size: 16px;">Archivio Fotografico <img src="../../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../../biblioteca/index.html" style="font-size: 16px;">Biblioteca <img src="../../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../../rivista_faenza/index.html" style="font-size: 16px;">Rivista Faenza <img src="../../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="../../shop/index.html" rel="noopener noreferrer" target="_blank" class="nav-link">SHOP</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-header-elements">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">+</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="side-drawer" id="sideDrawer">
+        <button class="drawer-close" id="drawerClose" aria-label="Chiudi menu">✕</button>
+        <ul class="drawer-list">
+            
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Visita <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../../prenota_ora/index.html">Prenota ora <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../index.html">Didattica per le scuole <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Cosa vedere <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../../le_collezioni/index.html">Le Collezioni <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../../calendario_eventi/index.html">Calendario eventi <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Info <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../../chi_siamo/index.html">Chi siamo <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../../dove_siamo/index.html">Dove siamo <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../../news/index.html">News <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Conservazione <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../../depositi/index.html">Depositi <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../../progetti/index.html">Progetti <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../../restauri/index.html">Restauri <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Risorse <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../../archivio_fotografico/index.html">Archivio Fotografico <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../../biblioteca/index.html">Biblioteca <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../../rivista_faenza/index.html">Rivista Faenza <img src="../../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="../../shop/index.html" class="drawer-link">Shop<span>→</span></a>
+            </li>
+        </ul>
+    </div>
+    <div class="container-fluid padding-top-h1">
+        <h1 class="padding-bottom-56 wsh1">A tavola con <br class="d-block d-lg-none d-sm-none"> i romani</h1>
+    </div>
+    <div class="modulo-2">
+        <div class="row g-0 mb-5">
+            <div class="col-12 col-lg-7 order-2 order-lg-1">
+                <div class="modulo-workshop">
+                    <h2 class="maiuscoletto">workshop</h2>
+                    <p class="testo_modulo_2_3">Vieni a conoscere le abitudini alimentari e i riti sociali degli antichi romani! Ispirandoci al vasellame dell’antica Roma.</p>
+                    <div class="modulo-2-buttons">
+                        <p class="testo_modulo_2_4"><span class="semibold">Durata:</span> 1h 30min</p><p class="testo_modulo_2_4"><span class="semibold">Costo:</span> 6€ a studente</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5 order-1 order-lg-2 p-0">
+                <div class="modulo-2-img">
+                    <img src="https://picsum.photos/600/400?random=10" alt="Modulo 2" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid padding-bottom-100">
+    <div class="col-12 padding-bottom-56 normal">Per la prenotazione ai workshop e laboratori, <br class="d-block d-lg-none d-sm-none"><a href="#" class="semibold" style="text-decoration: underline; color: #26547C;">compila il form<img src="../../imgs/freccetta-blu.svg" class="img-freccetta" alt="arrow"></a>
+    </div>
+    <a class="btn-generico d-none d-lg-block d-sm-block" href="../../didattica_scuole/index.html">Torna alla pagina precedente</a>
+    </div>
+      <script>
+        // script header
+document.addEventListener('DOMContentLoaded',()=>{
+            const sideDrawer=document.getElementById('sideDrawer'),
+                  menuToggle=document.getElementById('menuToggle');
+            
+            document.addEventListener('click',e=>{
+                const dt=e.target.closest('.dt-trigger');
+                if(dt){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const menu=dt.nextElementSibling;
+                    
+                    // Chiudi tutti i menu aperti
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m=>{
+                        m.classList.remove('active');
+                    });
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t=>{
+                        t.classList.remove('active-state');
+                    });
+                    
+                    // Apri solo il menu cliccato
+                    if(menu){
+                        menu.classList.add('active');
+                        dt.classList.add('active-state');
+                    }
+                    return;
+                }
+                
+                if(e.target.closest('#menuToggle')){
+                    e.stopPropagation();
+                    sideDrawer.classList.toggle('open');
+                    menuToggle.textContent=sideDrawer.classList.contains('open')?'-':'+';
+                    return;
+                }
+                
+                if(e.target.closest('.accordion-trigger')){
+                    e.preventDefault();
+                    const btn=e.target.closest('.accordion-trigger'),
+                          submenu=btn.nextElementSibling;
+                    
+                    // Chiudi tutti i submenu aperti nel drawer
+                    document.querySelectorAll('.drawer-submenu.open').forEach(m=>{
+                        if(m !== submenu) {
+                            m.classList.remove('open');
+                            const parentBtn = m.previousElementSibling;
+                            if(parentBtn) {
+                                parentBtn.querySelector('span').textContent = '+';
+                                parentBtn.classList.remove('active-color');
+                            }
+                        }
+                    });
+                    
+                    // Toggle il submenu cliccato
+                    if(submenu){
+                        submenu.classList.toggle('open');
+                        btn.querySelector('span').textContent=submenu.classList.contains('open')?'-':'+';
+                        btn.classList.toggle('active-color',submenu.classList.contains('open'));
+                    }
+                    return;
+                }
+                
+                if(e.target.closest('#drawerClose')){
+                    e.stopPropagation();
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent='+';
+                    return;
+                }
+                
+                if(!e.target.closest('.nav-item')&&!e.target.closest('.mobile-nav-item')){
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m=>m.classList.remove('active'));
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t=>t.classList.remove('active-state'));
+                }
+                
+                if(sideDrawer.classList.contains('open')&&!sideDrawer.contains(e.target)&&!menuToggle.contains(e.target)){
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent='+';
+                }
+            });
+        }); 
+          // script toggle
+       (function() {
+          // Seleziona elementi
+            var toggle = document.getElementById('filterToggle');
+            var switchEl = document.getElementById('toggleSwitch');
+            var options = document.getElementById('filterOptions');
+            var closeBtn = document.getElementById('filterClose');
+            var display = document.getElementById('currentFilter');
+            var buttons = document.querySelectorAll('.filter-option');
+
+            // APRI/CHIUDI toggle
+            toggle.onclick = function(e) {
+                e.stopPropagation();
+                switchEl.classList.toggle('active');
+                options.classList.toggle('active');
+            };
+
+            // CHIUDI con X (mobile)
+            closeBtn.onclick = function(e) {
+                e.stopPropagation();
+                switchEl.classList.remove('active');
+                options.classList.remove('active');
+            };
+
+            // Non serve più chiudere cliccando fuori su mobile
+
+            // GESTIONE FILTRI
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = function(e) {
+                    e.stopPropagation();
+                    
+                    var filter = this.getAttribute('data-filter');
+                    var isSelected = this.classList.contains('selected');
+                    
+                    if (filter === 'tutti') {
+                        // Deseleziona tutto e seleziona solo "Tutti"
+                        for (var j = 0; j < buttons.length; j++) {
+                            buttons[j].classList.remove('selected');
+                        }
+                        this.classList.add('selected');
+                        display.textContent = 'Tutti';
+                    } else {
+                        if (isSelected) {
+                            // Deseleziona
+                            this.classList.remove('selected');
+                            
+                            // Controlla se ci sono altri filtri attivi
+                            var hasActive = false;
+                            for (var k = 0; k < buttons.length; k++) {
+                                if (buttons[k].getAttribute('data-filter') !== 'tutti' && 
+                                    buttons[k].classList.contains('selected')) {
+                                    hasActive = true;
+                                    break;
+                                }
+                            }
+                            
+                            if (!hasActive) {
+                                // Attiva "Tutti"
+                                buttons[0].classList.add('selected');
+                                display.textContent = 'Tutti';
+                            } else {
+                                updateDisplay();
+                            }
+                        } else {
+                            // Seleziona
+                            this.classList.add('selected');
+                            // Deseleziona "Tutti"
+                            buttons[0].classList.remove('selected');
+                            updateDisplay();
+                        }
+                    }
+                    
+                    applyFilters();
+                };
+            }
+
+            function updateDisplay() {
+                var selected = [];
+                for (var i = 0; i < buttons.length; i++) {
+                    if (buttons[i].classList.contains('selected')) {
+                        selected.push(buttons[i].querySelector('span').textContent);
+                    }
+                }
+                display.textContent = selected.join(', ');
+            }
+
+            function applyFilters() {
+                var active = [];
+                for (var i = 0; i < buttons.length; i++) {
+                    if (buttons[i].classList.contains('selected') && 
+                        buttons[i].getAttribute('data-filter') !== 'tutti') {
+                        active.push(buttons[i].getAttribute('data-filter'));
+                    }
+                }
+                
+                var sections = document.querySelectorAll('h3');
+                for (var i = 0; i < sections.length; i++) {
+                    var text = sections[i].textContent.toLowerCase();
+                    var row = sections[i].nextElementSibling;
+                    var show = false;
+                    
+                    if (active.length === 0) {
+                        show = true;
+                    } else {
+                        for (var j = 0; j < active.length; j++) {
+                            if (active[j] === 'infanzia' && text.indexOf('infanzia') !== -1) show = true;
+                            if (active[j] === 'primaria' && text.indexOf('scuola primaria') !== -1) show = true;
+                            if (active[j] === 'secondaria1' && (text.indexOf('secondaria 1°') !== -1 || text.indexOf('secondaria 1') !== -1)) show = true;
+                            if (active[j] === 'secondaria2' && (text.indexOf('secondaria 2°') !== -1 || text.indexOf('università') !== -1)) show = true;
+                            if (active[j] === 'laboratori' && text.indexOf('laboratori speciali') !== -1) show = true;
+                        }
+                    }
+                    
+                    sections[i].style.display = show ? 'block' : 'none';
+                    if (row && row.classList.contains('row')) {
+                        row.style.display = show ? 'flex' : 'none';
+                    }
+                }
+            }
+        })();
+    </script>
+</body>
+</html>

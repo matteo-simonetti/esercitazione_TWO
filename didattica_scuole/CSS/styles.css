@@ -484,6 +484,7 @@
   font-family: outfit, sans-serif !important;
   font-size: 24px;
   color: #26547C;
+  width: fit-content;
 }
 
 .btn-generico:hover {
@@ -555,6 +556,7 @@
   right: 50%;
   width: 100vw;
 }
+
 .modulo-2 > .row,
 .modulo-3 > .row {
   margin: 0;
@@ -568,6 +570,16 @@
   height: 400px;
   padding: 50px 15px 40px 15px;
 }
+
+.modulo-workshop {
+  background-color: #FFFDEE;
+  color: #26547C;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  padding: 50px 15px 40px 15px;
+}
+
 .modulo-2-buttons,
 .modulo-3-buttons {
   display: flex;
@@ -745,7 +757,8 @@
     width: 100%;
   }
   .modulo-2-content,
-  .modulo-3-content {
+  .modulo-3-content,
+  .modulo-workshop {
     padding-left: calc((100vw - (100vw - 60px)) / 2);
     padding-right: 15px;
   }
@@ -803,7 +816,8 @@
     padding-right: 25px;
   }
   .modulo-2-content,
-  .modulo-3-content {
+  .modulo-3-content, 
+  .modulo-workshop {
     padding-left: calc((100vw - (100vw - 200px)) / 2);
     padding-right: 15px;
   }
@@ -974,6 +988,11 @@ p {
                 flex-direction: column;
                 gap: 10px;
                 box-shadow: none;
+            }
+            
+            .wsh1 {
+                font-size: 60px;
+                line-height: 68px;
             }
 
             /* Ordine mobile specifico */
