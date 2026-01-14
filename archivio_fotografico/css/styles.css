@@ -737,6 +737,14 @@ color: #26547C;
     font-size: 20px;
   }
   
+  .immagine_foto img {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+      object-position: center;
+      object-position: 25% center;
+    }
+
   .padding-top-h1 {
     padding-top: 56px;
 }
