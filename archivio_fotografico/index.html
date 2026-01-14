@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>MIC Faenza - Archivio Fotografico</title>
+    <link rel="icon" href="../imgs/logotipo_mic.svg" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="header row m-0 p-0 align-items-center">
+        <div class="col-2 d-flex align-items-center">
+            <a href="../index.html">
+                <img src="../imgs/logotipo_mic.svg" class="logo" alt="Logo">
+            </a>
+        </div>
+
+        <div class="col-9 d-flex justify-content-end align-items-center" style="position: static;">
+            
+            <div class="desktop-nav-container">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Visita</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../prenota_ora/index.html">Prenota ora <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../didattica_scuole/index.html">Didattica per le scuole <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Cosa vedere</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../le_collezioni/index.html">Le Collezioni <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../calendario_eventi/index.html">Calendario eventi <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Info</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../chi_siamo/index.html">Chi siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../dove_siamo/index.html">Dove siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../news/index.html">News <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">CONSERVAZIONE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../depositi/index.html" style="font-size: 16px;">Depositi<img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../restauri/index.html" style="font-size: 16px;">Restauri<img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../progetti/index.html" style="font-size: 16px;">Progetti<img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">RISORSE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../archivio_fotografico/index.html" style="font-size: 16px;">Archivio Fotografico <img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../biblioteca/index.html" style="font-size: 16px;">Biblioteca <img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../rivista_faenza/index.html" style="font-size: 16px;">Rivista Faenza <img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="https://shop.micfaenza.org/" rel="noopener noreferrer" target="_blank" class="nav-link">SHOP</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-header-elements">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">+</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="side-drawer" id="sideDrawer">
+        <button class="drawer-close" id="drawerClose" aria-label="Chiudi menu">✕</button>
+        <ul class="drawer-list">
+            
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Visita <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../prenota_ora/index.html">Prenota ora <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../didattica_scuole/index.html">Didattica per le scuole <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Cosa vedere <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../le_collezioni/index.html">Le Collezioni <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../calendario_eventi/index.html">Calendario eventi <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Info <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../chi_siamo/index.html">Chi siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../dove_siamo/index.html">Dove siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../news/index.html">News <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Conservazione <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../depositi/index.html">Depositi <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../progetti/index.html">Progetti <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../restauri/index.html">Restauri <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Risorse <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../archivio_fotografico/index.html">Archivio Fotografico <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../biblioteca/index.html">Biblioteca <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../rivista_faenza/index.html">Rivista Faenza <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="https://shop.micfaenza.org/" class="drawer-link">Shop<span>→</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container-fluid padding-top-h1">
+        <h1 class="padding-bottom-100">Archivio Fotografico</h1>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="modulo-4">
+                    <div class="modulo-4-text">
+                        <div class="modulo-4-date">Collezione storica</div>
+                        <div class="modulo-4-title">Fotografie d'epoca 1900-1950</div>
+                    </div>
+                    <div class="modulo-4-img">
+                        <img src="https://picsum.photos/400/340?random=60" alt="Archivio fotografico" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="modulo-4">
+                    <div class="modulo-4-text">
+                        <div class="modulo-4-date">Documentazione</div>
+                        <div class="modulo-4-title">Restauri e acquisizioni</div>
+                    </div>
+                    <div class="modulo-4-img">
+                        <img src="https://picsum.photos/400/340?random=61" alt="Archivio fotografico" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="modulo-4">
+                    <div class="modulo-4-text">
+                        <div class="modulo-4-date">Mostra virtuale</div>
+                        <div class="modulo-4-title">Ceramiche nel tempo</div>
+                    </div>
+                    <div class="modulo-4-img">
+                        <img src="https://picsum.photos/400/340?random=62" alt="Archivio fotografico" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="modulo-4">
+                    <div class="modulo-4-text">
+                        <div class="modulo-4-date">Catalogo digitale</div>
+                        <div class="modulo-4-title">Opere in alta risoluzione</div>
+                    </div>
+                    <div class="modulo-4-img">
+                        <img src="https://picsum.photos/400/340?random=63" alt="Archivio fotografico" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="modulo-4">
+                    <div class="modulo-4-text">
+                        <div class="modulo-4-date">Archivio eventi</div>
+                        <div class="modulo-4-title">Mostre e inaugurazioni</div>
+                    </div>
+                    <div class="modulo-4-img">
+                        <img src="https://picsum.photos/400/340?random=64" alt="Archivio fotografico" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="modulo-4">
+                    <div class="modulo-4-text">
+                        <div class="modulo-4-date">Ricerca avanzata</div>
+                        <div class="modulo-4-title">Database consultabile</div>
+                    </div>
+                    <div class="modulo-4-img">
+                        <img src="https://picsum.photos/400/340?random=65" alt="Archivio fotografico" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modulo-3">
+        <div class="row g-0 mb-5">
+            <div class="col-12 col-lg-5 order-1 p-0">
+                <div class="modulo-3-img">
+                    <img src="https://picsum.photos/600/400?random=66" alt="Richiesta immagini" />
+                </div>
+            </div>
+            <div class="col-12 col-lg-7 order-2">
+                <div class="modulo-3-content">
+                    <h2>Richiedi immagini dall'archivio</h2>
+                    <p class="testo_modulo_2_3">Il nostro archivio fotografico conserva migliaia di immagini storiche e contemporanee. Contattaci per richiedere riproduzioni in alta qualità per ricerca, pubblicazione o uso personale.</p>
+                    <div class="modulo-3-buttons">
+                        <button class="btn-esplora">Contattaci</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const sideDrawer=document.getElementById('sideDrawer'),
+                  menuToggle=document.getElementById('menuToggle');
+            
+            document.addEventListener('click',e=>{
+                const dt=e.target.closest('.dt-trigger');
+                if(dt){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const menu=dt.nextElementSibling;
+                    
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m=>{
+                        m.classList.remove('active');
+                    });
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t=>{
+                        t.classList.remove('active-state');
+                    });
+                    
+                    if(menu){
+                        menu.classList.add('active');
+                        dt.classList.add('active-state');
+                    }
+                    return;
+                }
+                
+                if(e.target.closest('#menuToggle')){
+                    e.stopPropagation();
+                    sideDrawer.classList.toggle('open');
+                    menuToggle.textContent=sideDrawer.classList.contains('open')?'-':'+';
+                    return;
+                }
+                
+                if(e.target.closest('.accordion-trigger')){
+                    e.preventDefault();
+                    const btn=e.target.closest('.accordion-trigger'),
+                          submenu=btn.nextElementSibling;
+                    
+                    document.querySelectorAll('.drawer-submenu.open').forEach(m=>{
+                        if(m !== submenu) {
+                            m.classList.remove('open');
+                            const parentBtn = m.previousElementSibling;
+                            if(parentBtn) {
+                                parentBtn.querySelector('span').textContent = '+';
+                                parentBtn.classList.remove('active-color');
+                            }
+                        }
+                    });
+                    
+                    if(submenu){
+                        submenu.classList.toggle('open');
+                        btn.querySelector('span').textContent=submenu.classList.contains('open')?'-':'+';
+                        btn.classList.toggle('active-color',submenu.classList.contains('open'));
+                    }
+                    return;
+                }
+                
+                if(e.target.closest('#drawerClose')){
+                    e.stopPropagation();
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent='+';
+                    return;
+                }
+                
+                if(!e.target.closest('.nav-item')&&!e.target.closest('.mobile-nav-item')){
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m=>m.classList.remove('active'));
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t=>t.classList.remove('active-state'));
+                }
+                
+                if(sideDrawer.classList.contains('open')&&!sideDrawer.contains(e.target)&&!menuToggle.contains(e.target)){
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent='+';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>MIC Faenza - Restauri</title>
+    <link rel="icon" href="imgs/logotipo_mic.svg" type="image/x-icon" />
+</head>
+
+<body>
+    <div class="header row m-0 p-0 align-items-center">
+        <div class="col-2 d-flex align-items-center">
+            <a href="../index.html">
+                <img src="../imgs/logotipo_mic.svg" class="logo" alt="Logo">
+            </a>
+        </div>
+
+        <div class="col-9 d-flex justify-content-end align-items-center" style="position: static;">
+            
+            <div class="desktop-nav-container">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Visita</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../prenota_ora/index.html">Prenota ora <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../didattica_scuole/index.html">Didattica per le scuole <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Cosa vedere</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../le_collezioni/index.html">Le Collezioni <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../calendario_eventi/index.html">Calendario eventi <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Info</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../chi_siamo/index.html">Chi siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../dove_siamo/index.html">Dove siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../news/index.html">News <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">CONSERVAZIONE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../depositi/index.html" style="font-size: 16px;">Depositi<img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../restauri/index.html" style="font-size: 16px;">Restauri<img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../progetti/index.html" style="font-size: 16px;">Progetti<img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">RISORSE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../archivio_fotografico/index.html" style="font-size: 16px;">Archivio Fotografico <img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../biblioteca/index.html" style="font-size: 16px;">Biblioteca <img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../rivista_faenza/index.html" style="font-size: 16px;">Rivista Faenza <img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="https://shop.micfaenza.org/" rel="noopener noreferrer" target="_blank" class="nav-link">SHOP</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-header-elements">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">+</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="side-drawer" id="sideDrawer">
+        <button class="drawer-close" id="drawerClose" aria-label="Chiudi menu">✕</button>
+        <ul class="drawer-list">
+            
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Visita <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../prenota_ora/index.html">Prenota ora <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../didattica_scuole/index.html">Didattica per le scuole <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Cosa vedere <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../le_collezioni/index.html">Le Collezioni <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../calendario_eventi/index.html">Calendario eventi <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Info <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../chi_siamo/index.html">Chi siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../dove_siamo/index.html">Dove siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../news/index.html">News <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Conservazione <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../depositi/index.html">Depositi <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../progetti/index.html">Progetti <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../restauri/index.html">Restauri <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Risorse <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../archivio_fotografico/index.html">Archivio Fotografico <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../biblioteca/index.html">Biblioteca <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../rivista_faenza/index.html">Rivista Faenza <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="https://shop.micfaenza.org/" class="drawer-link">Shop<span>→</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container-fluid padding-top-h1">
+        <h1 class="padding-bottom-100">Restauri</h1>
+        
+        <div class="row g-0 padding-bottom-150">
+            <div class="col-12">
+                <p>Attivo dagli anni Ottanta, il Laboratorio di Restauro opera nel campo della conservazione dei materiali ceramici, avvalendosi di restauratori di beni culturali qualificati. L'attività riguarda manufatti di diversa natura e tecnica, dalla terracotta alla porcellana, comprendendo sia reperti archeologici sia opere appartenenti a collezioni museali o collocate in spazi esterni. Il laboratorio svolge inoltre interventi su commissione, in prevalenza per enti pubblici, e nel corso degli anni ha realizzato restauri per importanti musei e collezioni, intervenendo anche su opere di rilevanti artisti del Novecento.</p>
+                
+                <p>Parallelamente, il Museo promuove da tempo attività di studio e aggiornamento nel settore del restauro, attraverso corsi, convegni e giornate di approfondimento dedicate alla conservazione della ceramica, spesso in collaborazione con istituzioni scientifiche e universitarie. Il personale del laboratorio è inoltre coinvolto in attività didattiche con l'Università di Bologna. La biblioteca del museo comprende infine una sezione specialistica dedicata alle pubblicazioni sul restauro.</p>
+            </div>
+        </div>
+
+    <div class="video-link-container" style="background: #f5f5f5; padding: 40px; border-radius: 8px; text-align: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="#FF0000" style="margin-bottom: 20px;">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            <h3 style="margin-bottom: 16px; font-size: 24px;">Video: Restauri</h3>
+            <p style="margin-bottom: 24px; color: #666;">Guarda il video sul laboratorio di restauro del MIC.</p>
+            <a href="https://www.youtube.com/watch?v=Z8vyIqttwAU&t=1s" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style="display: inline-block; background: #FF0000; color: white; padding: 12px 32px; text-decoration: none; border-radius: 4px; font-weight: 600; transition: background 0.3s ease;">
+            Guarda su YouTube →
+        </a>
+    </div>
+    
+        <h3 class="padding-bottom-56 padding-top-h1">Restauri completati</h3>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="modulo-4">
+                    <div class="modulo-4-text">
+                        <div class="modulo-4-date">Completato Dic 2025</div>
+                        <div class="modulo-4-title">Piatto istoriato Urbino XVI sec.</div>
+                    </div>
+                    <div class="modulo-4-img">
+                        <img src="https://picsum.photos/400/340?random=115" alt="Restauro completato" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="modulo-4">
+                    <div class="modulo-4-text">
+                        <div class="modulo-4-date">Completato Nov 2025</div>
+                        <div class="modulo-4-title">Servizio da tavola Ginori 1750</div>
+                    </div>
+                    <div class="modulo-4-img">
+                        <img src="https://picsum.photos/400/340?random=116" alt="Restauro completato" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="modulo-4">
+                    <div class="modulo-4-text">
+                        <div class="modulo-4-date">Completato Ott 2025</div>
+                        <div class="modulo-4-title">Anfora greca IV sec. a.C.</div>
+                    </div>
+                    <div class="modulo-4-img">
+                        <img src="https://picsum.photos/400/340?random=117" alt="Restauro completato" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const sideDrawer=document.getElementById('sideDrawer'),
+                  menuToggle=document.getElementById('menuToggle');
+            
+            document.addEventListener('click',e=>{
+                const dt=e.target.closest('.dt-trigger');
+                if(dt){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const menu=dt.nextElementSibling;
+                    
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m=>{
+                        m.classList.remove('active');
+                    });
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t=>{
+                        t.classList.remove('active-state');
+                    });
+                    
+                    if(menu){
+                        menu.classList.add('active');
+                        dt.classList.add('active-state');
+                    }
+                    return;
+                }
+                
+                if(e.target.closest('#menuToggle')){
+                    e.stopPropagation();
+                    sideDrawer.classList.toggle('open');
+                    menuToggle.textContent=sideDrawer.classList.contains('open')?'-':'+';
+                    return;
+                }
+                
+                if(e.target.closest('.accordion-trigger')){
+                    e.preventDefault();
+                    const btn=e.target.closest('.accordion-trigger'),
+                          submenu=btn.nextElementSibling;
+                    
+                    document.querySelectorAll('.drawer-submenu.open').forEach(m=>{
+                        if(m !== submenu) {
+                            m.classList.remove('open');
+                            const parentBtn = m.previousElementSibling;
+                            if(parentBtn) {
+                                parentBtn.querySelector('span').textContent = '+';
+                                parentBtn.classList.remove('active-color');
+                            }
+                        }
+                    });
+                    
+                    if(submenu){
+                        submenu.classList.toggle('open');
+                        btn.querySelector('span').textContent=submenu.classList.contains('open')?'-':'+';
+                        btn.classList.toggle('active-color',submenu.classList.contains('open'));
+                    }
+                    return;
+                }
+                
+                if(e.target.closest('#drawerClose')){
+                    e.stopPropagation();
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent='+';
+                    return;
+                }
+                
+                if(!e.target.closest('.nav-item')&&!e.target.closest('.mobile-nav-item')){
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m=>m.classList.remove('active'));
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t=>t.classList.remove('active-state'));
+                }
+                
+                if(sideDrawer.classList.contains('open')&&!sideDrawer.contains(e.target)&&!menuToggle.contains(e.target)){
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent='+';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

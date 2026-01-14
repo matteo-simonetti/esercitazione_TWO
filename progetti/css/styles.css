@@ -602,7 +602,7 @@ html, body {
   margin-top: auto;
 }
 .btn-esplora,
-.btn-prenota {
+.btn-mostra {
   background: none;
   border: 1px solid #FFFDEE;
   cursor: pointer;
@@ -610,7 +610,7 @@ html, body {
   font-size: 24px;
   color: #FFFDEE;
 }
-.btn-prenota:hover {
+.btn-mostra:hover {
   background: #FFFDEE;
   color: #26547C;
 }
@@ -709,20 +709,6 @@ html, body {
   justify-content: center;
   padding: 10px 30px 10px 10px;
 }
-.btn-mostra-piu {
-  background-color: transparent;
-  border: 2px solid #FFFDEE;
-  color: #FFFDEE;
-  cursor: pointer;
-  padding: 12px 32px;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-.btn-mostra-piu:hover {
-  background-color: #FFFDEE;
-  color: #26547C;
-}
-
 
 /* Media queries */
 
@@ -764,10 +750,7 @@ html, body {
   .modulo-progetti p {
     display: none;
   }
-  .btn-mostra-piu {
-    padding: 14px 40px;
-    width: 100%;
-  }
+  
   .modulo-2-content,
   .modulo-3-content {
     padding-left: calc((100vw - (100vw - 60px)) / 2);
@@ -778,9 +761,7 @@ html, body {
   }
 }
 @media (max-width: 767.98px) {
-  .btn-mostra-piu {
-    padding: 10px 24px;
-  }
+
   .testo_h1{
     margin-left: 35px;
   }

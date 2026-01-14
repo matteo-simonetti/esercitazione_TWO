@@ -1,9 +1,4 @@
-:root {
-  /* Desktop: Gutter 30px */
-  --bs-gutter-x: 30px;
-}
-
-  body {
+body {
   font-family: Outfit, sans-serif !important;
   color: #26547C;
   margin: 0;
@@ -12,6 +7,10 @@
 
 /* HEADER */
 :root{--brand:#26547C;--accent:#FFE66D;--accent-hover:#FFF39A;--drawer-bg:#1e4466}
+:root {
+  /* Desktop: Gutter 30px */
+  --bs-gutter-x: 30px;
+}
 
 .header{height:115px;background-color:var(--brand);}
 
