@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Outfit', sans-serif;
+    color: #26547C;
 }
 
 /* HEADER */
@@ -989,3 +990,35 @@ line-height: 45px;
                 max-width: 33.333333%;
             }
         }
+        .lista {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 32px;
+}
+
+.lista ul li {
+  list-style: none;
+  position: relative;
+  padding-left: 35px; /* Spazio per l'SVG */
+  margin-bottom: 16px; /* Distanza tra gli elementi */
+}
+
+.lista ul li:last-child {
+  margin-bottom: 28px; /* Rimuove il margine dall'ultimo elemento */
+}
+.lista ul li:first-child {
+  margin-top: 28px; /* Rimuove il margine dal primo elemento */
+}
+
+.lista ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px; /* Regola per allineamento verticale */
+  width: 20px;
+  height: 20px;
+  background-image: url('../../imgs/pallino_li.svg'); /* Sostituisci con il tuo SVG */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
