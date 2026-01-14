@@ -740,6 +740,12 @@ html, body {
   .padding-top-h1 {
     padding-top: 56px;
 }
+  .img_depositi_mobile img{
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+      object-position: center;
+    }
 
   .desktop-only {
     display: none !important;
