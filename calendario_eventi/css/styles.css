@@ -989,3 +989,213 @@ line-height: 45px;
                 max-width: 33.333333%;
             }
         }
+
+        /* Stile per il toggle filtri */
+.filter-container {
+            max-width: auto;
+            margin: 0 auto;
+            padding-bottom: 28px;
+        }
+
+        /* TOGGLE BUTTON */
+        .filter-toggle-wrapper {
+            background: #26547C;
+            border: none;
+            padding: 15px 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .filter-toggle-wrapper:hover {
+            background: #1e4466;
+        }
+
+        .filter-label {
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            user-select: none;
+        }
+
+        /* TOGGLE SWITCH */
+        .toggle-switch {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: white;
+            border-radius: 15px;
+            transition: background 0.3s ease;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background: #FFE66D;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-switch.active .toggle-slider {
+            transform: translateX(30px);
+        }
+
+        /* FILTER OPTIONS - DESKTOP */
+        .filter-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.4s ease;
+        }
+
+        .filter-options.active {
+            max-height: 600px;
+            opacity: 1;
+            margin-top: 10px;
+        }
+
+        .filter-option {
+            background: transparent;
+            border: none;
+            color: #26547C;
+            padding: 10px 0;
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 32px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-align: left;
+        }
+
+        .filter-option:hover {
+            opacity: 0.7;
+        }
+
+        .filter-checkbox {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            border: 2px solid #ccc;
+            background: #ccc;
+            transition: all 0.3s ease;
+        }
+
+        .filter-option.selected .filter-checkbox {
+            background: #26547C;
+            border-color: #26547C;
+        }
+
+        .filter-close {
+            display: none;
+        }
+
+        /* MOBILE */
+        @media (max-width: 576px) {
+            .filter-options {
+                position: static;
+                width: 100%;
+                background: transparent;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                box-shadow: none;
+            }
+
+            /* Ordine mobile specifico */
+            .filter-option[data-filter="tutti"] { order: 1; }
+            .filter-option[data-filter="laboratori"] { order: 2; }
+            .filter-option[data-filter="infanzia"] { order: 3; }
+            .filter-option[data-filter="primaria"] { order: 4; }
+            .filter-option[data-filter="secondaria1"] { order: 5; }
+            .filter-option[data-filter="secondaria2"] { order: 6; }
+
+            .filter-options.active {
+                right: auto;
+            }
+
+            .filter-toggle-wrapper {
+                padding: 12px 15px;
+                gap: 15px;
+            }
+
+            .filter-label {
+                font-size: 18px;
+            }
+
+            .toggle-switch {
+                width: 50px;
+                height: 26px;
+            }
+
+            .toggle-slider {
+                width: 20px;
+                height: 20px;
+            }
+
+            .toggle-switch.active .toggle-slider {
+                transform: translateX(24px);
+            }
+
+            .filter-option {
+                font-size: 24px;
+                line-height: 32px;
+                padding: 15px 20px;
+                color: #26547C;
+                background: white;
+                border: 2px solid #26547C;
+            }
+
+            .filter-option:hover {
+                opacity: 1;
+            }
+
+            .filter-option.selected {
+                background: #26547C;
+                color: #FFE66D;
+                border-color: #26547C;
+            }
+
+            .filter-checkbox {
+                width: 28px;
+                height: 28px;
+                min-width: 28px;
+                border: 2px solid #ccc;
+                background: #ccc;
+            }
+
+            .filter-option.selected .filter-checkbox {
+                background: #FFE66D;
+                border-color: #FFE66D;
+            }
+
+            .filter-close {
+                display: none;
+            }
+        }
+
+        /* DEMO CONTENT */
+        .demo-content {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+        }
+
+        .demo-content h3 {
+            color: #26547C;
+            margin-bottom: 10px;
+        }

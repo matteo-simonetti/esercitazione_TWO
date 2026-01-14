@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <!-- Font Outfit da Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>MIC Faenza - Didattica per le scuole</title>
+    <link rel="icon" href="../imgs/logotipo_mic.svg" type="image/x-icon" />
+</head>
+<body>
+     <div class="header row m-0 p-0 align-items-center">
+        <div class="col-2 d-flex align-items-center">
+            <a href="#top">
+                <img src="../imgs/logotipo_mic.svg" class="logo" alt="Logo">
+            </a>
+        </div>
+
+        <div class="col-9 d-flex justify-content-end align-items-center" style="position: static;">
+            
+            <div class="desktop-nav-container">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Visita</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Orari <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Biglietti <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Come arrivare <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Cosa vedere</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Le Collezioni <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Calendario eventi <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Info</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Chi siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Dove siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">News <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">CONSERVAZIONE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Depositi <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Restauri <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Progetti <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">RISORSE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Archivio Fotografico <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Biblioteca <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Rivista Faenza <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">SHOP</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Libri <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Gadget <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="#">Merchandising <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mobile-header-elements">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">+</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="side-drawer" id="sideDrawer">
+        <button class="drawer-close" id="drawerClose" aria-label="Chiudi menu">✕</button>
+        <ul class="drawer-list">
+            
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Visita <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="#">Orari <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Biglietti <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Come arrivare <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Cosa vedere <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="#">Le Collezioni <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Calendario eventi <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Info <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="#">Chi siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Dove siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">News <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Conservazione <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="#">Depositi <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Progetti <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Restauri <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Risorse <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="#">Archivio Fotografico <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Biblioteca <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Rivista Faenza <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Shop <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="#">Libri <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Gadget <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="#">Merchandising <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="container-fluid p-0">
+            <h1 class="padding-bottom-56 padding-top-h1">Calendario eventi</h1>
+
+                        <!-- FILTRO TOGGLE -->
+
+             <div class="filter-container">
+        <div class="filter-toggle-wrapper" id="filterToggle">
+            <span class="filter-label">Filtri</span>
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+
+        <div class="filter-options" id="filterOptions">
+            <button class="filter-close" id="filterClose">✕</button>
+            
+            <button class="filter-option selected" data-filter="tutti">
+                <svg class="filter-checkbox" viewBox="0 0 20 20"></svg>
+                <span>Tutti</span>
+            </button>
+            
+            <button class="filter-option" data-filter="concerto">
+                <svg class="filter-checkbox" viewBox="0 0 20 20"></svg>
+                <span>Concerto</span>
+            </button>
+            
+            <button class="filter-option" data-filter="mostra">
+                <svg class="filter-checkbox" viewBox="0 0 20 20"></svg>
+                <span>Mostra temporanea</span>
+            </button>
+            
+            <button class="filter-option" data-filter="inaugurazione">
+                <svg class="filter-checkbox" viewBox="0 0 20 20"></svg>
+                <span>Inaugurazione</span>
+            </button>
+            
+            <button class="filter-option" data-filter="incontri">
+                <svg class="filter-checkbox" viewBox="0 0 20 20"></svg>
+                <span>Incontri</span>
+            </button>
+            
+            <button class="filter-option" data-filter="workshop">
+                <svg class="filter-checkbox" viewBox="0 0 20 20"></svg>
+                <span>Workshop</span>
+            </button>
+        </div>
+
+        <div class="demo-content d-none">
+            <h3>Filtro selezionato: <span id="currentFilter">Tutti</span></h3>
+            <p>Clicca sul toggle per mostrare/nascondere i filtri. Seleziona una o più categorie.</p>
+        </div>
+    </div>
+            <!-- FINE FILTRO TOGGLE -->
+
+                    <!-- Modulo Calendario -->
+
+        <h3 class="mb-5">Modulo Calendario</h3>
+        <h4 class="mb-4">Dicembre</h4>
+
+        <div class="container-fluid my-5 g-0">
+            <div class="row g-4 padding-bottom-28">
+                <div class="col-12">
+                <div class="row g-0 modulo-calendario" data-categoria="mostra">
+                    <div class="col-12 col-sm-4 col-lg-3 p-0">
+                    <div class="modulo-calendario-img">
+                        <img src="../imgs/istockphoto-636379014-612x612.jpg" alt="evento.titolo" />
+                    </div>
+                    </div>
+                    <div class="col-12 col-sm-8 col-lg-6">
+                    <div class="modulo-calendario-content">
+                        <div class="normal">Mostra Temporanea</div>
+                        <div class="modulo-calendario-info">
+                        <p class="modulo-calendario-data">1/12 - 18/01</p>
+                        <p class="modulo-calendario-titolo">Léa Renard, Double Jeu</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row g-4 padding-bottom-28">
+                <div class="col-12">
+                <div class="row g-0 modulo-calendario" data-categoria="workshop">
+                    <div class="col-12 col-sm-4 col-lg-3 p-0">
+                    <div class="modulo-calendario-img">
+                        <img src="../imgs/istockphoto-636379014-612x612.jpg" alt="evento.titolo" />
+                    </div>
+                    </div>
+                    <div class="col-12 col-sm-8 col-lg-6">
+                    <div class="modulo-calendario-content">
+                        <div class="normal">Workshop</div>
+                        <div class="modulo-calendario-info">
+                        <p class="modulo-calendario-data">6/12 14:30-17:00</p>
+                        <p class="modulo-calendario-titolo">Contenitori d'argilla</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row g-4 padding-bottom-28">   
+                <div class="col-12">
+                <div class="row g-0 modulo-calendario" data-categoria="concerto">
+                    <div class="col-12 col-sm-4 col-lg-3 p-0">
+                    <div class="modulo-calendario-img">
+                        <img src="../imgs/istockphoto-636379014-612x612.jpg" alt="evento.titolo" />
+                    </div>
+                    </div>
+                    <div class="col-12 col-sm-8 col-lg-6">
+                    <div class="modulo-calendario-content">
+                        <div class="normal">Concerto</div>
+                        <div class="modulo-calendario-info">
+                        <p class="modulo-calendario-data">7/12 11:00-12:00</p>
+                        <p class="modulo-calendario-titolo">Soavi Armonie: For Clarinet – Duo Bertolini – D'Angelo</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row g-4 padding-bottom-28">   
+                <div class="col-12">
+                <div class="row g-0 modulo-calendario" data-categoria="incontri">
+                    <div class="col-12 col-sm-4 col-lg-3 p-0">
+                    <div class="modulo-calendario-img">
+                        <img src="../imgs/istockphoto-636379014-612x612.jpg" alt="evento.titolo" />
+                    </div>
+                    </div>
+                    <div class="col-12 col-sm-8 col-lg-6">
+                    <div class="modulo-calendario-content">
+                        <div class="normal">Incontri</div>
+                        <div class="modulo-calendario-info">
+                        <p class="modulo-calendario-data">7/12 11:00-12:00</p>
+                        <p class="modulo-calendario-titolo">Soavi Armonie: For Clarinet – Duo Bertolini – D'Angelo</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row g-4 padding-bottom-28">   
+                <div class="col-12">
+                <div class="row g-0 modulo-calendario" data-categoria="inaugurazione">
+                    <div class="col-12 col-sm-4 col-lg-3 p-0">
+                    <div class="modulo-calendario-img">
+                        <img src="../imgs/istockphoto-636379014-612x612.jpg" alt="evento.titolo" />
+                    </div>
+                    </div>
+                    <div class="col-12 col-sm-8 col-lg-6">
+                    <div class="modulo-calendario-content">
+                        <div class="normal">Inaugurazione</div>
+                        <div class="modulo-calendario-info">
+                        <p class="modulo-calendario-data">7/12 11:00-12:00</p>
+                        <p class="modulo-calendario-titolo">Soavi Armonie: For Clarinet – Duo Bertolini – D'Angelo</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row g-4 padding-bottom-28">   
+                <div class="col-12">
+                <div class="row g-0 modulo-calendario" data-categoria="inaugurazione">
+                    <div class="col-12 col-sm-4 col-lg-3 p-0">
+                    <div class="modulo-calendario-img">
+                        <img src="../imgs/istockphoto-636379014-612x612.jpg" alt="evento.titolo" />
+                    </div>
+                    </div>
+                    <div class="col-12 col-sm-8 col-lg-6">
+                    <div class="modulo-calendario-content">
+                        <div class="normal">Inaugurazione</div>
+                        <div class="modulo-calendario-info">
+                        <p class="modulo-calendario-data">7/12 11:00-12:00</p>
+                        <p class="modulo-calendario-titolo">Soavi Armonie: For Clarinet – Duo Bertolini – D'Angelo</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+                  <script>
+        // script header
+        document.addEventListener('DOMContentLoaded',()=>{const sideDrawer=document.getElementById('sideDrawer'),menuToggle=document.getElementById('menuToggle');document.addEventListener('click',e=>{const dt=e.target.closest('.dt-trigger');if(dt){e.preventDefault();e.stopPropagation();const menu=dt.nextElementSibling;document.querySelectorAll('.dropdown-menu.active').forEach(m=>{if(m!==menu)m.classList.remove('active')});document.querySelectorAll('.dt-trigger.active-state').forEach(t=>{if(t!==dt)t.classList.remove('active-state')});if(menu){menu.classList.toggle('active');dt.classList.toggle('active-state',menu.classList.contains('active'))}return}if(e.target.closest('#menuToggle')){e.stopPropagation();sideDrawer.classList.toggle('open');menuToggle.textContent=sideDrawer.classList.contains('open')?'-':'+';return}if(e.target.closest('.accordion-trigger')){e.preventDefault();const btn=e.target.closest('.accordion-trigger'),submenu=btn.nextElementSibling;if(submenu){submenu.classList.toggle('open');btn.querySelector('span').textContent=submenu.classList.contains('open')?'-':'+';btn.classList.toggle('active-color',submenu.classList.contains('open'))}return}if(e.target.closest('#drawerClose')){e.stopPropagation();sideDrawer.classList.remove('open');menuToggle.textContent='+';return}if(!e.target.closest('.nav-item')&&!e.target.closest('.mobile-nav-item')){document.querySelectorAll('.dropdown-menu.active').forEach(m=>m.classList.remove('active'));document.querySelectorAll('.dt-trigger.active-state').forEach(t=>t.classList.remove('active-state'))}if(sideDrawer.classList.contains('open')&&!sideDrawer.contains(e.target)&&!menuToggle.contains(e.target)){sideDrawer.classList.remove('open');menuToggle.textContent='+'}});});
+        
+        // script toggle e filtri
+       (function() {
+            // Seleziona elementi
+            var toggle = document.getElementById('filterToggle');
+            var switchEl = document.getElementById('toggleSwitch');
+            var options = document.getElementById('filterOptions');
+            var closeBtn = document.getElementById('filterClose');
+            var display = document.getElementById('currentFilter');
+            var buttons = document.querySelectorAll('.filter-option');
+
+            // APRI/CHIUDI toggle
+            toggle.onclick = function(e) {
+                e.stopPropagation();
+                switchEl.classList.toggle('active');
+                options.classList.toggle('active');
+            };
+
+            // CHIUDI con X (mobile)
+            closeBtn.onclick = function(e) {
+                e.stopPropagation();
+                switchEl.classList.remove('active');
+                options.classList.remove('active');
+            };
+
+            // GESTIONE FILTRI
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = function(e) {
+                    e.stopPropagation();
+                    
+                    var filter = this.getAttribute('data-filter');
+                    var isSelected = this.classList.contains('selected');
+                    
+                    if (filter === 'tutti') {
+                        // Deseleziona tutto e seleziona solo "Tutti"
+                        for (var j = 0; j < buttons.length; j++) {
+                            buttons[j].classList.remove('selected');
+                        }
+                        this.classList.add('selected');
+                        if (display) display.textContent = 'Tutti';
+                    } else {
+                        if (isSelected) {
+                            // Deseleziona
+                            this.classList.remove('selected');
+                            
+                            // Controlla se ci sono altri filtri attivi
+                            var hasActive = false;
+                            for (var k = 0; k < buttons.length; k++) {
+                                if (buttons[k].getAttribute('data-filter') !== 'tutti' && 
+                                    buttons[k].classList.contains('selected')) {
+                                    hasActive = true;
+                                    break;
+                                }
+                            }
+                            
+                            if (!hasActive) {
+                                // Attiva "Tutti"
+                                buttons[0].classList.add('selected');
+                                if (display) display.textContent = 'Tutti';
+                            } else {
+                                updateDisplay();
+                            }
+                        } else {
+                            // Seleziona
+                            this.classList.add('selected');
+                            // Deseleziona "Tutti"
+                            buttons[0].classList.remove('selected');
+                            updateDisplay();
+                        }
+                    }
+                    
+                    applyFilters();
+                };
+            }
+
+            function updateDisplay() {
+                if (!display) return;
+                var selected = [];
+                for (var i = 0; i < buttons.length; i++) {
+                    if (buttons[i].classList.contains('selected')) {
+                        selected.push(buttons[i].querySelector('span').textContent);
+                    }
+                }
+                display.textContent = selected.join(', ');
+            }
+
+            function applyFilters() {
+                // Raccogli i filtri attivi
+                var activeFilters = [];
+                for (var i = 0; i < buttons.length; i++) {
+                    if (buttons[i].classList.contains('selected') && 
+                        buttons[i].getAttribute('data-filter') !== 'tutti') {
+                        activeFilters.push(buttons[i].getAttribute('data-filter'));
+                    }
+                }
+                
+                // Seleziona tutti gli eventi (elementi con classe .modulo-calendario)
+                var eventi = document.querySelectorAll('.modulo-calendario');
+                
+                for (var i = 0; i < eventi.length; i++) {
+                    var evento = eventi[i];
+                    var categoria = evento.getAttribute('data-categoria');
+                    var show = false;
+                    
+                    // Se non ci sono filtri attivi, mostra tutto
+                    if (activeFilters.length === 0) {
+                        show = true;
+                    } else {
+                        // Controlla se la categoria dell'evento è nei filtri attivi
+                        for (var j = 0; j < activeFilters.length; j++) {
+                            if (categoria === activeFilters[j]) {
+                                show = true;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    // Nascondi o mostra l'intero contenitore col-12
+                    var container = evento.closest('.col-12');
+                    if (container) {
+                        container.style.display = show ? 'block' : 'none';
+                    }
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
