@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>MIC Faenza - Form Scuole</title>
+    <link rel="icon" href="../imgs/logotipo_mic.svg" type="image/x-icon" />
+    <style>
+        .contact-form-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .contact-info {
+            padding-right: 20px;
+        }
+
+        .form-container {
+            padding-left: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #26547C;
+            margin-bottom: 10px;
+        }
+
+        .form-group label .required {
+            color: #d32f2f;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            font-family: 'Outfit', sans-serif;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #26547C;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #26547C;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(38, 84, 124, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 3px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+
+        .form-button {
+            font-family: 'Outfit', sans-serif;
+            background-color: #26547C;
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .form-button:hover {
+            background-color: #1e4466;
+        }
+
+        .form-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 992px) {
+            .contact-form-wrapper {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-info {
+                padding-right: 0;
+                padding-bottom: 30px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .form-container {
+                padding-left: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .form-group label {
+                font-size: 16px;
+            }
+
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                font-size: 14px;
+            }
+
+            .form-button {
+                width: 100%;
+                padding: 12px;
+                font-size: 16px;
+            }
+
+            .checkbox-group label {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header row m-0 p-0 align-items-center">
+        <div class="col-2 d-flex align-items-center">
+            <a href="../index.html">
+                <img src="../imgs/logotipo_mic.svg" class="logo" alt="Logo">
+            </a>
+        </div>
+
+        <div class="col-9 d-flex justify-content-end align-items-center" style="position: static;">
+            
+            <div class="desktop-nav-container">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Visita</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../prenota_ora/index.html">Prenota ora <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../didattica_scuole/index.html">Didattica per le scuole <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Cosa vedere</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../le_collezioni/index.html">Le Collezioni <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../calendario_eventi/index.html">Calendario eventi <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Info</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../chi_siamo/index.html">Chi siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../dove_siamo/index.html">Dove siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="../news/index.html">News <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">CONSERVAZIONE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../depositi/index.html" style="font-size: 16px;">Depositi<img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../restauri/index.html" style="font-size: 16px;">Restauri<img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../progetti/index.html" style="font-size: 16px;">Progetti<img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">RISORSE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../archivio_fotografico/index.html" style="font-size: 16px;">Archivio Fotografico <img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../biblioteca/index.html" style="font-size: 16px;">Biblioteca <img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="../rivista_faenza/index.html" style="font-size: 16px;">Rivista Faenza <img src="../imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="https://shop.micfaenza.org/" rel="noopener noreferrer" target="_blank" class="nav-link">SHOP</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-header-elements">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">+</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="side-drawer" id="sideDrawer">
+        <button class="drawer-close" id="drawerClose" aria-label="Chiudi menu">✕</button>
+        <ul class="drawer-list">
+            
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Visita <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../prenota_ora/index.html">Prenota ora <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../didattica_scuole/index.html">Didattica per le scuole <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Cosa vedere <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../le_collezioni/index.html">Le Collezioni <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../calendario_eventi/index.html">Calendario eventi <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Info <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../chi_siamo/index.html">Chi siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../dove_siamo/index.html">Dove siamo <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../news/index.html">News <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Conservazione <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../depositi/index.html">Depositi <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../progetti/index.html">Progetti <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../restauri/index.html">Restauri <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Risorse <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="../archivio_fotografico/index.html">Archivio Fotografico <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../biblioteca/index.html">Biblioteca <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="../rivista_faenza/index.html">Rivista Faenza <img src="../imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="https://shop.micfaenza.org/" class="drawer-link">Shop<span>→</span></a>
+            </li>
+        </ul>
+    </div>
+
+    <!--Main-->
+    <div class="container-fluid padding-top-h1">
+        <h1>Contatti</h1>
+        <h2 class="padding-bottom-28">Form di prenotazione</h2>
+        <p class="padding-bottom-28">Risponderemo entro una settimana dall'invio all'e-mail indicata dal referente.</p>
+
+        <div class="contact-form-wrapper">
+            <!-- CONTACT INFO -->
+            <div class="contact-info">
+                <p><span class="black">Indirizzo</span> <br>Museo Internazionale delle Ceramiche in Faenza<br> Viale Baccarini n. 19<br>48018 Faenza (RA) <br>tel: +39 0546 69 73 11 <br>E-mail:info@micfaenza.org
+                <br><br>Fondazione MIC<br>Museo Internazionale<br> delle Ceramiche in Faenza – Onlus<br>Sede legale: Via Campidori n. 248018 Faenza (RA)<br>tel: +39 0546 69 73 11<br>E-mail: info@micfaenza.org<br>PEC: fondazione.mic@pec.it<br>Partita IVA 02067320396<br>Codice Fiscale 90020390390</p>
+            </div>
+
+            <!-- FORM -->
+            <div class="form-container">
+                <form id="formScuole" method="POST" action="#" novalidate>
+                    
+                    <div class="form-group">
+                        <label for="referente">Referente <span class="required">*</span></label>
+                        <input type="text" id="referente" name="referente" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="scuola">Scuola/Università <span class="required">*</span></label>
+                        <input type="text" id="scuola" name="scuola" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alunni">N. alunni <span class="required">*</span></label>
+                        <input type="number" id="alunni" name="alunni" min="1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="laboratorio">Laboratorio d'interesse <span class="required">*</span></label>
+                        <select id="laboratorio" name="laboratorio" required>
+                            <option value="">Seleziona un laboratorio</option>
+                            <option value="amuleti">Amuleti</option>
+                            <option value="tavola_romani">A tavola con i Romani</option>
+                            <option value="altro">Altro (specificare nel messaggio)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="messaggio">Messaggio</label>
+                        <textarea id="messaggio" name="messaggio" required></textarea>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consenso" name="consenso" required>
+                        <label for="consenso">Autorizzo il trattamento dei miei dati personali secondo la normativa sulla privacy <span class="required">*</span></label>
+                    </div>
+
+                    <button type="submit" class="form-button">Invia richiesta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const sideDrawer=document.getElementById('sideDrawer'),
+                  menuToggle=document.getElementById('menuToggle');
+            
+            document.addEventListener('click',e=>{
+                const dt=e.target.closest('.dt-trigger');
+                if(dt){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const menu=dt.nextElementSibling;
+                    
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m=>{
+                        m.classList.remove('active');
+                    });
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t=>{
+                        t.classList.remove('active-state');
+                    });
+                    
+                    if(menu){
+                        menu.classList.add('active');
+                        dt.classList.add('active-state');
+                    }
+                    return;
+                }
+                
+                if(e.target.closest('#menuToggle')){
+                    e.stopPropagation();
+                    sideDrawer.classList.toggle('open');
+                    menuToggle.textContent=sideDrawer.classList.contains('open')?'-':'+';
+                    return;
+                }
+                
+                if(e.target.closest('.accordion-trigger')){
+                    e.preventDefault();
+                    const btn=e.target.closest('.accordion-trigger'),
+                          submenu=btn.nextElementSibling;
+                    
+                    document.querySelectorAll('.drawer-submenu.open').forEach(m=>{
+                        if(m !== submenu) {
+                            m.classList.remove('open');
+                            const parentBtn = m.previousElementSibling;
+                            if(parentBtn) {
+                                parentBtn.querySelector('span').textContent = '+';
+                                parentBtn.classList.remove('active-color');
+                            }
+                        }
+                    });
+                    
+                    if(submenu){
+                        submenu.classList.toggle('open');
+                        btn.querySelector('span').textContent=submenu.classList.contains('open')?'-':'+';
+                        btn.classList.toggle('active-color',submenu.classList.contains('open'));
+                    }
+                    return;
+                }
+                
+                if(e.target.closest('#drawerClose')){
+                    e.stopPropagation();
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent='+';
+                    return;
+                }
+                
+                if(!e.target.closest('.nav-item')&&!e.target.closest('.mobile-nav-item')){
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m=>m.classList.remove('active'));
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t=>t.classList.remove('active-state'));
+                }
+                
+                if(sideDrawer.classList.contains('open')&&!sideDrawer.contains(e.target)&&!menuToggle.contains(e.target)){
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent='+';
+                }
+            });
+
+            // Form validation
+            const form = document.getElementById('formScuole');
+            if(form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(form);
+                    const data = {
+                        referente: formData.get('referente'),
+                        email: formData.get('email'),
+                        scuola: formData.get('scuola'),
+                        alunni: formData.get('alunni'),
+                        laboratorio: formData.get('laboratorio'),
+                        messaggio: formData.get('messaggio'),
+                        consenso: formData.get('consenso')
+                    };
+                    
+                    // Validation
+                    if(!data.referente || !data.email || !data.scuola || !data.alunni || !data.laboratorio || !data.messaggio) {
+                        alert('Per favore, compila tutti i campi obbligatori');
+                        return;
+                    }
+                    
+                    if(!data.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                        alert('Per favore, inserisci un\'email valida');
+                        return;
+                    }
+
+                    if(!data.consenso) {
+                        alert('Per favore, accetta il trattamento dei dati personali');
+                        return;
+                    }
+                    
+                    console.log('Form data:', data);
+                    alert('Richiesta inviata con successo! Ti contatteremo al più presto.');
+                    form.reset();
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
