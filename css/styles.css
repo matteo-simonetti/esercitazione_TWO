@@ -1322,7 +1322,14 @@ p, .normal {
   .filter-option[data-filter="primaria"] { order: 4; }
   .filter-option[data-filter="secondaria1"] { order: 5; }
   .filter-option[data-filter="secondaria2"] { order: 6; }
+  .filter-option[data-filter="workshop"] { order: 2; }
+  .filter-option[data-filter="concerto"] { order: 3; }
+  .filter-option[data-filter="mostra"] { order: 4; }
+  .filter-option[data-filter="inaugurazione"] { order: 5; }
+  .filter-option[data-filter="incontri"] { order: 6; }
 }
+
+
 /* Sticky Cart Button */
   .cart-sticky-btn {
     position: fixed;
