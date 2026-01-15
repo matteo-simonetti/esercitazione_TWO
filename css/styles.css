@@ -1584,6 +1584,7 @@ p, .normal {
     align-items: center;
     justify-content: flex-end; /* Posiziona i controlli a destra in modo coerente */
   }
+  
   /* Footer Styles */
 .footer {
     background-color: #26547c;
