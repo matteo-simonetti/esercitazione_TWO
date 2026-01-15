@@ -317,15 +317,6 @@ p, .normal {
   color: var(--brand);
 }
 
-.btn-qty {
-  background: none;
-  border: 1px solid #FFFDEE;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 24px;
-  color: #FFFDEE;
-}
-
 .btn-qty:hover {
   background: var(--brand);
   color: white;
@@ -1571,6 +1562,8 @@ p, .normal {
     cursor: pointer;
     height: 30px;
     width: 30px;
+    font-size: 20px;
+    color: #26547C;
   }
   /* CLASSI SPECIFICHE PER BOTTONI DI QUANTITÀ */
   
