@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Outfit', sans-serif;
-    color: #26547C;
+color: #26547C;
 }
 
 /* HEADER */
@@ -577,7 +577,7 @@ html, body {
   display: flex;
   flex-direction: column;
   flex: 1; /* Occupa tutto lo spazio disponibile */
-  min-height: 400px;
+  min-height: 360px;
   padding: 50px 15px 40px 15px;
 }
 
@@ -740,11 +740,13 @@ html, body {
   .padding-top-h1 {
     padding-top: 56px;
 }
-
+  .padding-bottom-100 {
+    padding-bottom: 56px;
+  }
   .desktop-only {
     display: none !important;
   }
-
+  
   .modulo-1-text {
     padding-left: 10px;
     padding-top: 10px;
@@ -774,9 +776,48 @@ html, body {
     padding-left: calc((100vw - (100vw - 60px)) / 2);
     padding-right: 15px;
   }
-  .testo_h1{
-    margin-left: 35px;
+  h1{
+    font-size: 48px;
+    line-height: 56px;
   }
+  h2 {
+  font-size: 36px;
+  line-height: 44px;
+}
+h3 {
+  font-size: 32px;
+  line-height: 40px;
+}
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+}
+p {
+  font-weight: 300;
+  line-height: 26px;
+  font-size: 18px;
+}
+.normal {
+  font-weight: 300;
+  line-height: 26px;
+  font-size: 18px;
+}
+.modulo-4 {
+  background: #26547C;
+  max-height: 340px;
+  overflow: hidden;
+  color: white;
+}
+.modulo-4-img {
+  background: #ddd;
+  height: 340px;
+  overflow: hidden;
+}
+.modulo-4-img img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
 }
 @media (max-width: 767.98px) {
   .btn-mostra-piu {
@@ -804,6 +845,33 @@ html, body {
 }
 
 @media (min-width: 577px) {
+  /* Nuove classi font */
+  h1 {
+    font-size: 64px;
+    line-height: 72px;
+  }
+  h2 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+  h3 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  h4 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  p {
+    font-weight: 300;
+    line-height: 32px;
+    font-size: 24px;
+  }
+  .normal {
+    font-weight: 300;
+    line-height: 32px;
+    font-size: 24px;
+  }
   .container-fluid {
   max-width: calc(100vw - 200px);
   padding-left: 0;
@@ -822,33 +890,6 @@ html, body {
 .testo_h1{
     margin-left: 105px;
   }
-}
-/* Nuove classi font */
-h1 {
-  font-size: 64px;
-  line-height: 72px;
-}
-h2 {
-  font-size: 48px;
-  line-height: 54px;
-}
-h3 {
-  font-size: 36px;
-  line-height: 42px;
-}
-h4 {
-  font-size: 32px;
-  line-height: 40px;
-}
-p {
-  font-weight: 300;
-  line-height: 32px;
-  font-size: 24px;
-}
-.normal {
-  font-weight: 300;
-  line-height: 32px;
-  font-size: 24px;
 }
 .semibold {
   font-weight: 600;
@@ -876,7 +917,6 @@ p {
 }
 .testo_h1{
   color: white;
-  font-size: 48px;
 }
 
 h3{
