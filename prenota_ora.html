@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <!-- Font Outfit da Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>MIC Faenza - Prenota ora</title>
+    <link rel="icon" href="imgs/logo_mic.svg" type="image/x-icon" />
+</head>
+<body>
+    <div class="header row m-0 p-0 align-items-center">
+        <div class="col-2 d-flex align-items-center">
+            <a href="index.html">
+                <img src="imgs/logotipo_mic.svg" class="logo" alt="Logo">
+            </a>
+        </div>
+
+        <div class="col-9 d-flex justify-content-end align-items-center" style="position: static;">
+            
+            <div class="desktop-nav-container">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Visita</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="prenota_ora.html">Prenota ora <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="didattica_scuole.html">Didattica per le scuole <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Cosa vedere</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="le_collezioni.html">Le Collezioni <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="calendario_eventi.html">Calendario eventi <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Info</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="chi_siamo.html">Chi siamo <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="dove_siamo.html">Dove siamo <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="news.html">News <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">CONSERVAZIONE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="depositi.html" style="font-size: 16px;">Depositi<img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="restauri.html" style="font-size: 16px;">Restauri<img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="progetti.html" style="font-size: 16px;">Progetti<img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">RISORSE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="archivio_fotografico.html" style="font-size: 16px;">Archivio Fotografico <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="biblioteca.html" style="font-size: 16px;">Biblioteca <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="rivista_faenza.html" style="font-size: 16px;">Rivista Faenza <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="https://shop.micfaenza.org/" rel="noopener noreferrer" target="_blank" class="nav-link">SHOP</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-header-elements">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">+</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="side-drawer" id="sideDrawer">
+        <button class="drawer-close" id="drawerClose" aria-label="Chiudi menu">✕</button>
+        <ul class="drawer-list">
+            
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Visita <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="prenota_ora.html">Prenota ora <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="didattica_scuole.html">Didattica per le scuole <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Cosa vedere <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="le_collezioni.html">Le Collezioni <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="calendario_eventi.html">Calendario eventi <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Info <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="chi_siamo.html">Chi siamo <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="dove_siamo.html">Dove siamo <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="news.html">News <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Conservazione <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="depositi.html">Depositi <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="progetti.html">Progetti <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="restauri.html">Restauri <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Risorse <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="archivio_fotografico.html">Archivio Fotografico <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="biblioteca.html">Biblioteca <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="rivista_faenza.html">Rivista Faenza <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="https://shop.micfaenza.org/" class="drawer-link">Shop<span>→</span></a>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- Main -->
+
+    <div class="container-fluid p-0">
+            <h1 class="padding-bottom-56 padding-top-h1">Prenota ora</h1>
+            <h2 class="padding-bottom-28">Orari</h2>
+                <div class="row align-items-start padding-bottom-28 normal">
+                    <div class="col-12 col-md-4 padding-bottom-28">
+                        <p><span class="semibold">Aprile / Ottobre:</span><br>
+                        Dalle 10 alle 19 da martedì a domenica.</p>
+                    </div>
+                    <div class="col-12 col-lg-5 offset-lg-1 padding-bottom-56">
+                        <p><span class="semibold">Novembre / Marzo:</span><br>
+                        Dalle 10 alle 14 da martedì a venerdì.<br>
+                        Dalle 10 alle 18 nei weekend.</p>
+                    </div>
+                </div>
+    <h2 class="mb-4 padding-bottom-56">Biglietti</h2>
+       <h4>FAMIGLIA</h4>
+        <div class="padding-bottom-28 normal">(2 adulti e almeno un minorenne)</div>
+        <div class="row align-items-center padding-bottom-28 normal">
+            <div class="col-7 col-lg-4"><span class="semibold">Accesso standard</span></div>
+            <div class="col-5 col-lg-3">
+                <div class="qty-controls">
+                    <span class="ticket-price">21 €</span>
+                    <button class="btn-qty minus">-</button>
+                    <span class="qty-val">0</span>
+                    <button class="btn-qty plus" data-name="Famiglia - Accesso standard" data-price="21">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center padding-bottom-56 normal">
+            <div class="col-7 col-lg-4"><span class="semibold">Accesso esteso</span><br>(mostre temporanee visitabili)</div>
+            <div class="col-5 col-lg-3">
+                <div class="qty-controls">
+                    <span class="ticket-price">23 €</span>
+                    <button class="btn-qty minus">-</button>
+                    <span class="qty-val">0</span>
+                    <button class="btn-qty plus" data-name="Famiglia - Accesso esteso" data-price="23">+</button>
+                </div>
+            </div>
+        </div>
+
+        <h4>STUDENTI E DOCENTI</h4>
+        <p class="normal mb-4">(scuole superiori, università)</p>
+        <div class="row align-items-center padding-bottom-28 normal">
+            <div class="col-7 col-lg-4"><span class="semibold">Accesso standard</span></div>
+            <div class="col-5 col-lg-3">
+                <div class="qty-controls">
+                    <span class="ticket-price">4 €</span>
+                    <button class="btn-qty minus">-</button>
+                    <span class="qty-val">0</span>
+                    <button class="btn-qty plus" data-name="Studenti/Docenti - Accesso standard" data-price="4">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center padding-bottom-56 normal">
+            <div class="col-7 col-lg-4"><span class="semibold">Accesso esteso</span><br>(mostre temporanee visitabili)</div>
+            <div class="col-5 col-lg-3">
+                <div class="qty-controls">
+                    <span class="ticket-price">5 €</span>
+                    <button class="btn-qty minus">-</button>
+                    <span class="qty-val">0</span>
+                    <button class="btn-qty plus" data-name="Studenti/Docenti - Accesso esteso" data-price="5">+</button>
+                </div>
+            </div>
+        </div>
+
+        <h4>RESIDENTI LOCALI</h4>
+        <p class="normal mb-4">(cittadini di Faenza)</p>
+        <div class="row align-items-center padding-bottom-28 normal">
+            <div class="col-7 col-lg-4"><span class="semibold">Accesso standard</span></div>
+            <div class="col-5 col-lg-3">
+                <div class="qty-controls">
+                    <span class="ticket-price">6 €</span>
+                    <button class="btn-qty minus">-</button>
+                    <span class="qty-val">0</span>
+                    <button class="btn-qty plus" data-name="Residenti - Accesso standard" data-price="6">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center padding-bottom-56 normal">
+            <div class="col-7 col-lg-4"><span class="semibold">Accesso esteso</span><br>(mostre temporanee visitabili)</div>
+            <div class="col-5 col-lg-3">
+                <div class="qty-controls">
+                    <span class="ticket-price">8 €</span>
+                    <button class="btn-qty minus">-</button>
+                    <span class="qty-val">0</span>
+                    <button class="btn-qty plus" data-name="Residenti - Accesso esteso" data-price="8">+</button>
+                </div>
+            </div>
+        </div>
+            <div class="row align-items-center normal">
+                <div class="col-9 col-lg-4 d-flex align-items-start">
+                    <div>
+                        <h4>MIC CARD <button class="mic-info-btn" aria-label="Info MIC Card" aria-expanded="false">i</button></h4>
+                        <p class="normal mb-4">(acquisto permanente)</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="qty-controls">
+                        <span class="ticket-price">40 €</span>
+                        <button class="btn-generico mic-card-btn" data-name="MIC CARD" data-price="4">
+                            <span class="normale">Aggiungi al carrello</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center padding-bottom-56 normal">
+                <div class="col-12 col-lg-4 mic-card-info">
+                    <p class="normal">
+                        Accesso illimitato al museo <br>
+                        + <br>Accesso alle mostre temporanee per te e un ospite a tua scelta <br>
+                        + <br>20% di sconto a tutte le attività e prodotti
+                    </p>
+                </div>
+            </div>
+            
+            <h4>DIDATTICA PER LE SCUOLE</h4>
+            <p class="normal mb-4">(laboratori)</p>
+            <div class="row normal">
+                <div class="col-12 padding-bottom-28"><span class="semibold">Scuole dell'infanzia, primarie e secondarie di 1° grado:</span> Ingresso gratuito</div>
+                <div class="col-12 padding-bottom-28"><span class="semibold">Scuole secondarie di 2° grado e università:</span> 6€ per studente</div>
+                <div class="col-12 padding-bottom-56">Per la prenotazione di visite guidate, laboratori o workshop, <a href="#" class="semibold" style="text-decoration: underline; color: #26547C;">compila il form<img src="imgs/freccetta-blu.svg" class="img-freccetta" alt="arrow"></a>
+            </div>
+        </div>
+
+        <h4 class="padding-bottom-28">VISITE GUIDATE</h4>
+        <div class="row align-items-start padding-bottom-28 normal">
+          <div class="col-12 col-lg-4">
+                <div class="semibold">Fino a 15 persone (Italiano)</div>
+                <div class="padding-bottom-28"><strong>60€</strong> + 9€ a persona</div>
+                <div class="semibold">16-30 persone (Italiano)</div>
+                <div class="padding-bottom-28"><strong>80€</strong> + 9€ a persona</div>
+            </div>
+          <div class="col-12 col-lg-5 offset-lg-1">
+                <div class="semibold">Fino a 15 persone (in lingua)</div>
+                <div class="padding-bottom-28"><strong>80€</strong> + 9€ a persona</div>
+                <div class="semibold">16-30 persone (in lingua)</div>
+                <div class="padding-bottom-28"><strong>100€</strong> + 9€ a persona</div>
+            </div>
+        </div>
+
+    <!-- il div chiuso sotto è il div container-fluid -->
+    </div>
+    
+    <!-- Sticky Cart Button -->
+    <button class="cart-sticky-btn" id="cartButton">
+        <div class="cart-icon"><img src="imgs/carrello.svg"/></div>
+        <span class="cart-badge" id="cartBadge" style="display: none;">0</span>
+    </button>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Cart Panel -->
+    <div class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+            <h2>Carrello</h2>
+            <button class="cart-close" id="cartClose">✕</button>
+        </div>
+        <div class="cart-body" id="cartBody">
+            <div class="cart-empty">
+                <p class="normal">Il tuo carrello è vuoto</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Totale:</span>
+                <span id="cartTotal">0 €</span>
+            </div>
+            <button class="btn-checkout" id="checkoutBtn">Procedi al pagamento</button>
+        </div>
+    </div>
+    
+    <script>
+        // Navigation menu script
+        document.addEventListener('DOMContentLoaded',()=>{
+            const sideDrawer=document.getElementById('sideDrawer'),
+                  menuToggle=document.getElementById('menuToggle');
+            
+            document.addEventListener('click',e=>{
+                const dt=e.target.closest('.dt-trigger');
+                if(dt){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const menu=dt.nextElementSibling;
+                    
+                    // Chiudi tutti i menu aperti
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m=>{
+                        m.classList.remove('active');
+                    });
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t=>{
+                        t.classList.remove('active-state');
+                    });
+                    
+                    // Apri solo il menu cliccato
+                    if(menu){
+                        menu.classList.add('active');
+                        dt.classList.add('active-state');
+                    }
+                    return;
+                }
+                
+                if(e.target.closest('#menuToggle')){
+                    e.stopPropagation();
+                    sideDrawer.classList.toggle('open');
+                    menuToggle.textContent=sideDrawer.classList.contains('open')?'-':'+';
+                    return;
+                }
+                
+                if(e.target.closest('.accordion-trigger')){
+                    e.preventDefault();
+                    const btn=e.target.closest('.accordion-trigger'),
+                          submenu=btn.nextElementSibling;
+                    
+                    // Chiudi tutti i submenu aperti nel drawer
+                    document.querySelectorAll('.drawer-submenu.open').forEach(m=>{
+                        if(m !== submenu) {
+                            m.classList.remove('open');
+                            const parentBtn = m.previousElementSibling;
+                            if(parentBtn) {
+                                parentBtn.querySelector('span').textContent = '+';
+                                parentBtn.classList.remove('active-color');
+                            }
+                        }
+                    });
+                    
+                    // Toggle il submenu cliccato
+                    if(submenu){
+                        submenu.classList.toggle('open');
+                        btn.querySelector('span').textContent=submenu.classList.contains('open')?'-':'+';
+                        btn.classList.toggle('active-color',submenu.classList.contains('open'));
+                    }
+                    return;
+                }
+                
+                if(e.target.closest('#drawerClose')){
+                    e.stopPropagation();
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent='+';
+                    return;
+                }
+                
+                if(!e.target.closest('.nav-item')&&!e.target.closest('.mobile-nav-item')){
+                    document.querySelectorAll('.dropdown-menu.active').forEach(m=>m.classList.remove('active'));
+                    document.querySelectorAll('.dt-trigger.active-state').forEach(t=>t.classList.remove('active-state'));
+                }
+                
+                if(sideDrawer.classList.contains('open')&&!sideDrawer.contains(e.target)&&!menuToggle.contains(e.target)){
+                    sideDrawer.classList.remove('open');
+                    menuToggle.textContent='+';
+                }
+            });
+        });
+        // ==========================================
+        // CART FUNCTIONALITY
+        // ==========================================
+
+        // Cart state
+        let cart = [];
+
+        // Elements
+        const cartButton = document.getElementById('cartButton');
+        const cartBadge = document.getElementById('cartBadge');
+        const cartOverlay = document.getElementById('cartOverlay');
+        const cartPanel = document.getElementById('cartPanel');
+        const cartClose = document.getElementById('cartClose');
+        const cartBody = document.getElementById('cartBody');
+        const cartFooter = document.getElementById('cartFooter');
+        const cartTotal = document.getElementById('cartTotal');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+
+        // Quantity controls for tickets
+        document.querySelectorAll('.qty-controls').forEach(control => {
+            const btnMinus = control.querySelector('.minus');
+            const btnPlus = control.querySelector('.plus');
+            const valDisplay = control.querySelector('.qty-val');
+
+            if (btnPlus && valDisplay) {
+                btnPlus.addEventListener('click', () => {
+                    const newQty = parseInt(valDisplay.textContent) + 1;
+                    valDisplay.textContent = newQty;
+                    
+                    // Add to cart
+                    const name = btnPlus.dataset.name;
+                    const price = parseFloat(btnPlus.dataset.price);
+                    if (name && price) {
+                        addToCart(name, price);
+                    }
+                });
+            }
+
+            if (btnMinus && valDisplay && btnPlus) {
+                btnMinus.addEventListener('click', () => {
+                    let current = parseInt(valDisplay.textContent);
+                    if (current > 0) {
+                        valDisplay.textContent = current - 1;
+                        
+                        // Remove from cart
+                        const name = btnPlus.dataset.name;
+                        if (name) {
+                            removeFromCart(name);
+                        }
+                    }
+                });
+            }
+        });
+
+        // MIC CARD button handler
+        document.querySelectorAll('.mic-card-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const name = btn.dataset.name;
+                const price = parseFloat(btn.dataset.price);
+                
+                // Check if MIC CARD is already in cart
+                const existing = cart.find(item => item.name === name);
+                if (existing && existing.quantity >= 1) {
+                    // Visual feedback for "already added"
+                    btn.style.background = '#FF6B6B';
+                    btn.style.color = 'white';
+                    btn.textContent = 'Già aggiunta!';
+                    setTimeout(() => {
+                        btn.style.background = '';
+                        btn.style.color = '';
+                        btn.innerHTML = '<span class="normale">Aggiungi al carrello</span>';
+                    }, 1500);
+                    return;
+                }
+                
+                if (name && price) {
+                    addToCart(name, price);
+                    // Visual feedback
+                    btn.style.background = '#26547C';
+                    btn.style.color = 'white';
+                    setTimeout(() => {
+                        btn.style.background = '';
+                        btn.style.color = '';
+                    }, 200);
+                }
+            });
+        });
+        
+        // MIC CARD info toggle (mobile) — simplified and accessible
+        (function(){
+            const btn = document.querySelector('.mic-info-btn');
+            const info = document.querySelector('.mic-card-info');
+            if (!btn || !info) return;
+
+            const setOpen = (open) => {
+                info.classList.toggle('open', open);
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            };
+
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation(); // prevent document handler from immediately closing it
+                setOpen(!info.classList.contains('open'));
+            });
+
+            // Close when clicking outside or pressing Escape
+            document.addEventListener('click', (e) => {
+                if (!info.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && info.classList.contains('open')) setOpen(false);
+            });
+        })();
+        // Cart functions
+        function addToCart(name, price) {
+            const existing = cart.find(item => item.name === name);
+            
+            // Limit MIC CARD to 1
+            if (name === 'MIC CARD' && existing && existing.quantity >= 1) {
+                return;
+            }
+            
+            if (existing) {
+                // For MIC CARD, don't increase quantity beyond 1
+                if (name === 'MIC CARD') {
+                    return;
+                }
+                existing.quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+            updateCart();
+        }
+
+        function removeFromCart(name) {
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.quantity--;
+                if (existing.quantity === 0) {
+                    cart = cart.filter(item => item.name !== name);
+                }
+            }
+            updateCart();
+        }
+
+        function deleteFromCart(name) {
+            cart = cart.filter(item => item.name !== name);
+            updateCart();
+            
+            // Reset quantity display for regular tickets
+            document.querySelectorAll('.btn-qty.plus').forEach(btn => {
+                if (btn.dataset.name === name) {
+                    const control = btn.closest('.qty-controls');
+                    if (control) {
+                        const valDisplay = control.querySelector('.qty-val');
+                        if (valDisplay) {
+                            valDisplay.textContent = '0';
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateCart() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            // Update badge
+            if (totalItems > 0) {
+                cartBadge.style.display = 'flex';
+                cartBadge.textContent = totalItems;
+            } else {
+                cartBadge.style.display = 'none';
+            }
+
+            // Update cart body
+            if (cart.length === 0) {
+                cartBody.innerHTML = '<div class="cart-empty"><p class="normal">Il tuo carrello è vuoto</p></div>';
+                cartFooter.style.display = 'none';
+            } else {
+                cartBody.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-details">Quantità: ${item.quantity}</div>
+                        <div class="cart-item-footer">
+                            <div class="cart-item-price">${(item.price * item.quantity).toFixed(2)} €</div>
+                            <button class="cart-item-remove" onclick="deleteFromCart('${item.name.replace(/'/g, "\\'")}')">Rimuovi</button>
+                        </div>
+                    </div>
+                `).join('');
+                cartFooter.style.display = 'block';
+                cartTotal.textContent = `${totalPrice.toFixed(2)} €`;
+            }
+        }
+
+        // Open/Close cart
+        cartButton.addEventListener('click', () => {
+            cartOverlay.classList.add('active');
+            cartPanel.classList.add('active');
+        });
+
+        cartClose.addEventListener('click', () => {
+            cartOverlay.classList.remove('active');
+            cartPanel.classList.remove('active');
+        });
+
+        cartOverlay.addEventListener('click', () => {
+            cartOverlay.classList.remove('active');
+            cartPanel.classList.remove('active');
+        });
+
+        // Checkout
+        checkoutBtn.addEventListener('click', () => {
+            if (cart.length > 0) {
+                const itemsList = cart.map(item => 
+                    `${item.name} x${item.quantity} = ${(item.price * item.quantity).toFixed(2)}€`
+                ).join('\n');
+                alert(`Procedendo al pagamento...\n\n${itemsList}\n\nTotale: ${cartTotal.textContent}`);
+            }
+        });
+
+
+        // Make deleteFromCart available globally for inline onclick
+        window.deleteFromCart = deleteFromCart;
+    </script>
+</body>
+</html>
