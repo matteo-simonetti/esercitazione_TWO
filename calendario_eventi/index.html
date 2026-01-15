@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -306,7 +306,87 @@
         
 
 
-                  <script>
+              
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="../imgs/logotipo_mic.svg" alt="MIC Logo">
+            </div>
+
+            <div class="footer-contact">
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item">
+                        <p>Viale Baccarini n. 19<br>48018 Faenza (RA)</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <p>Cellulare: <a href="tel:+390546697311">+39 0546 69 73 11</a></p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <p>Email: <a href="mailto:info@micfaenza.org">info@micfaenza.org</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Visita</h4>
+                    <ul>
+                        <li><a href="../prenota_ora/index.html">Prenota ora</a></li>
+                        <li><a href="../didattica_scuole/index.html">Didattica per le scuole</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Cosa vedere</h4>
+                    <ul>
+                        <li><a href="../le_collezioni/index.html">Le Collezioni</a></li>
+                        <li><a href="../calendario_eventi/index.html">Calendario Eventi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="../chi_siamo/index.html">Chi siamo</a></li>
+                        <li><a href="../dove_siamo/index.html">Dove siamo</a></li>
+                        <li><a href="../news/index.html">News</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Conservazione</h4>
+                    <ul>
+                        <li><a href="../depositi/index.html">Depositi</a></li>
+                        <li><a href="../restauri/index.html">Restauri</a></li>
+                        <li><a href="../progetti/index.html">Progetti</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Risorse</h4>
+                    <ul>
+                        <li><a href="../archivio_fotografico/index.html">Archivio Fotografico</a></li>
+                        <li><a href="../biblioteca/index.html">Biblioteca</a></li>
+                        <li><a href="../rivista_faenza/index.html">Rivista Faenza</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Altro sul museo</h4>
+                    <ul>
+                        <li><a href="#">AccessibilitÃ </a></li>
+                        <li><a href="#">Contatti</a></li>
+                        <li><a href="#">Sostienici</a></li>
+                        <li><a href="https://shop.micfaenza.org/" rel="noopener noreferrer" target="_blank">Bookshop</a></li>
+                        <li><a href="#">Premio Faenza</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
         // script header
         document.addEventListener('DOMContentLoaded',()=>{const sideDrawer=document.getElementById('sideDrawer'),menuToggle=document.getElementById('menuToggle');document.addEventListener('click',e=>{const dt=e.target.closest('.dt-trigger');if(dt){e.preventDefault();e.stopPropagation();const menu=dt.nextElementSibling;document.querySelectorAll('.dropdown-menu.active').forEach(m=>{if(m!==menu)m.classList.remove('active')});document.querySelectorAll('.dt-trigger.active-state').forEach(t=>{if(t!==dt)t.classList.remove('active-state')});if(menu){menu.classList.toggle('active');dt.classList.toggle('active-state',menu.classList.contains('active'))}return}if(e.target.closest('#menuToggle')){e.stopPropagation();sideDrawer.classList.toggle('open');menuToggle.textContent=sideDrawer.classList.contains('open')?'-':'+';return}if(e.target.closest('.accordion-trigger')){e.preventDefault();const btn=e.target.closest('.accordion-trigger'),submenu=btn.nextElementSibling;if(submenu){submenu.classList.toggle('open');btn.querySelector('span').textContent=submenu.classList.contains('open')?'-':'+';btn.classList.toggle('active-color',submenu.classList.contains('open'))}return}if(e.target.closest('#drawerClose')){e.stopPropagation();sideDrawer.classList.remove('open');menuToggle.textContent='+';return}if(!e.target.closest('.nav-item')&&!e.target.closest('.mobile-nav-item')){document.querySelectorAll('.dropdown-menu.active').forEach(m=>m.classList.remove('active'));document.querySelectorAll('.dt-trigger.active-state').forEach(t=>t.classList.remove('active-state'))}if(sideDrawer.classList.contains('open')&&!sideDrawer.contains(e.target)&&!menuToggle.contains(e.target)){sideDrawer.classList.remove('open');menuToggle.textContent='+'}});});
         

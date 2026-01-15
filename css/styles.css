@@ -990,3 +990,127 @@ line-height: 45px;
                 max-width: 33.333333%;
             }
         }
+
+/* Footer */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #26547c;
+    color: #fff;
+    padding: 50px 100px 40px;
+    font-family: 'Outfit', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    margin-bottom: 40px;
+}
+
+.footer-logo img {
+    height: 60px;
+    width: auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 40px;
+    border-top: 1px solid #fff;
+    padding-top: 30px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-contact {
+    margin-bottom: 50px;
+}
+
+.footer-contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-contact-item p {
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.footer-contact-item a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact-item a:hover {
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 30px 30px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .footer-logo img {
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
