@@ -1854,6 +1854,16 @@ p, .normal {
   color: var(--brand);
 }
 
+/* Pallino personalizzato per liste */
+.pallino-li {
+  width: 26px;
+  height: 26px;
+  margin-right: 15px;
+  margin-bottom: 3px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
 .newsletter-privacy {
   font-size: 14px !important;
   line-height: 20px !important;
