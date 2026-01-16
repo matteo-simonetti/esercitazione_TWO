@@ -139,6 +139,65 @@
         <p> Sostieni il MIC di Faenza e contribuisci a custodire un patrimonio unico al mondo:<br>
             Le donazioni andranno a finanziare progetti di conservazione e restauro.
             Anche un piccolo gesto può fare la differenza per il futuro di questo luogo straordinario.</p>
+        
+        <div class="sostienici-modules-grid">
+            <div class="donation-module">
+                <h3 class="module-title">5x1000</h3>
+                <p class="module-description">Dona il 5×1000 della tua dichiarazione dei redditi: una scelta a sostegno della cultura dell'arte ceramica del mondo</p>
+                <button class="btn-dona" data-tipo="5x1000">Dona ora</button>
+            </div>
+
+            <div class="donation-module">
+                <h3 class="module-title">Bonifico</h3>
+                <p class="module-description">
+                Scopri come donare al MIC, anche con PayPal, Satispay e Bonifico Bancario.</p>
+                <button class="btn-dona">Dona ora</button>
+            </div>
+
+            <div class="donation-module">
+                <h3 class="module-title">Art Bonus</h3>
+                <p class="module-description">Tutte le donazioni in denaro alla Fondazione MIC usufruiscono dell’Art Bonus, uno speciale beneficio fiscale dedicato ai sostenitori della cultura.</p>
+                <button class="btn-dona" data-tipo="art-bonus">Dona ora</button>
+            </div>
+
+            <div class="donation-module">
+                <h3 class="module-title">MIC card</h3>
+                <p class="module-description">La MIC Card è un modo per rimanere sempre in contatto con noi  e con il vostro sostegno entrare a fare parte della nostra comunità.</p>
+                <button class="btn-dona" data-tipo="mic-card" data-link="https://shop.micfaenza.org/prodotto/micard-abb/">Dona ora</button>
+            </div>
+        </div>
+    </div>
+        <!-- Modal 5x1000 -->
+    <div id="modal5x1000" class="modal-5x1000">
+        <div class="modal-5x1000-content">
+            <button class="modal-5x1000-close" id="close5x1000">✕</button>
+            <div class="modal-5x1000-body">
+                <p>Nella dichiarazione dei reditti, grazie al DPCM del 28 luglio 2016, sarà possibile per il contribuente indicare direttamente l'ente culturale a cui vuole destinare il suo 5 per mille.</p>
+                
+                <p>Il MIC è inserito nell'elenco permanente dei soggetti di cui all'art. 2 del suddetto DPCM ed è l'unico museo in Romagna.</p>
+                
+                <p>Quindi se volete sostenere la cultura ceramica e il nostro Museo – che rappresenta una delle più grandi raccolte di ceramica del pianeta – inserite nella apposita casella "Finanziamento delle attività di tutela dei Beni Culturali e Paesaggistici" e inserisci il nostro codice: <span class="codice-fiscale">90020390390</span> per sostenere l'arte ceramica del mondo.</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal Art Bonus -->
+    <div id="modalArtBonus" class="modal-art-bonus">
+        <div class="modal-art-bonus-content">
+            <button class="modal-art-bonus-close" id="closeArtBonus">✕</button>
+            <div class="modal-art-bonus-body">
+                <p>L'Art Bonus è una speciale agevolazione fiscale che consente un credito di imposta del 65% per le donazioni.</p>
+                
+                <h4 class="benefici-title">Benefici</h4>
+                <ul class="benefici-list">
+                    <li>50-100€: Guida al Museo</li>
+                    <li>100-400€: Catalogo mostra a scelta</li>
+                    <li>400€+: Catalogo + MIC Card</li>
+                </ul>
+                
+                <p><strong>Per approfondimenti:</strong> <a href="https://artbonus.gov.it" target="_blank" class="link-popup">artbonus.gov.it</a></p>
+            </div>
+        </div>
     </div>
         <!-- Footer -->
     <footer class="footer">
@@ -223,7 +282,51 @@
 
         document.addEventListener('DOMContentLoaded',()=>{
             const sideDrawer=document.getElementById('sideDrawer'),
-                  menuToggle=document.getElementById('menuToggle');
+                  menuToggle=document.getElementById('menuToggle'),
+                  modal5x1000=document.getElementById('modal5x1000'),
+                  close5x1000=document.getElementById('close5x1000'),
+                  modalArtBonus=document.getElementById('modalArtBonus'),
+                  closeArtBonus=document.getElementById('closeArtBonus');
+            
+            // Aggiungi click handler ai bottoni "Dona ora"
+            const donateButtons = document.querySelectorAll('.btn-dona');
+            donateButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if(button.dataset.tipo === '5x1000') {
+                        modal5x1000.classList.add('show');
+                    } else if(button.dataset.tipo === 'art-bonus') {
+                        modalArtBonus.classList.add('show');
+                    } else if(button.dataset.tipo === 'mic-card' && button.dataset.link) {
+                        window.open(button.dataset.link, '_blank');
+                    } else {
+                        window.open('https://www.paypal.com/donate/?hosted_button_id=MGAZC8QBAX2E2', '_blank');
+                    }
+                });
+            });
+            
+            // Chiudi modal 5x1000
+            close5x1000.addEventListener('click', () => {
+                modal5x1000.classList.remove('show');
+            });
+            
+            // Chiudi modal Art Bonus
+            closeArtBonus.addEventListener('click', () => {
+                modalArtBonus.classList.remove('show');
+            });
+            
+            // Chiudi modal cliccando fuori
+            modal5x1000.addEventListener('click', (e) => {
+                if(e.target === modal5x1000) {
+                    modal5x1000.classList.remove('show');
+                }
+            });
+            
+            modalArtBonus.addEventListener('click', (e) => {
+                if(e.target === modalArtBonus) {
+                    modalArtBonus.classList.remove('show');
+                }
+            });
             
             document.addEventListener('click',e=>{
                 const dt=e.target.closest('.dt-trigger');
