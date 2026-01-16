@@ -29,6 +29,13 @@ a {
   transition: all 0.3s ease;
 }
 
+/* Smooth underline transition for hover effects */
+a,
+.nav-link,
+.voce_fianco {
+  transition: all 0.3s ease, text-decoration 0.3s ease;
+}
+
 
 /* ==========================================
    TIPOGRAFIA
@@ -135,12 +142,12 @@ p, .normal {
   display: block;
   padding: 5px 0;
   border-bottom: 3px solid transparent;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
 .nav-link:hover {
   color: var(--accent-hover);
-  text-decoration: underline;
+  border-bottom-color: var(--accent-hover);
 }
 
 .nav-link.active-state {
