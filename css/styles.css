@@ -697,7 +697,6 @@ p, .normal {
 /* Toggle Button */
 .filter-toggle-wrapper {
   border: none;
-  padding: 12px 18px;
   display: inline-flex;
   align-items: center;
   gap: 15px;
@@ -708,7 +707,7 @@ p, .normal {
 
 
 .filter-label {
-  font-size: 18px;
+  font-size: 32px;
   font-weight: 600;
   color: #26547C;
   user-select: none;
