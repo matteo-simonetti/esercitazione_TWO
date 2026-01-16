@@ -377,7 +377,8 @@ p, .normal {
 }
 
 .modulo-2-img,
-.modulo-3-img {
+.modulo-3-img,
+.modulo-workshop {
   background: #ccc;
   color: white;
   height: 100%;
@@ -386,7 +387,8 @@ p, .normal {
 }
 
 .modulo-2-img img,
-.modulo-3-img img {
+.modulo-3-img img,
+.modulo-workshop img {
   height: 100%;
   object-fit: cover;
   width: 100%;
