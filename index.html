@@ -121,6 +121,21 @@
         </ul>
     </div>
 
+    <!-- Newsletter Modal -->
+    <div id="newsletterModal" class="newsletter-modal">
+        <div class="newsletter-modal-content">
+            <button class="newsletter-modal-close" id="closeNewsletter" aria-label="Chiudi">✕</button>
+            <div class="newsletter-modal-body">
+                <h2>Iscriviti alla Newsletter</h2>
+                <p>Ricevi aggiornamenti esclusivi su mostre, eventi e novità dal nostro museo direttamente nella tua inbox.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Il tuo indirizzo email" required>
+                    <button type="submit" class="btn-newsletter">Iscriviti</button>
+                </form>
+                <p class="newsletter-privacy">Non condivideremo mai i tuoi dati. <a href="#">Leggi la privacy policy</a></p>
+            </div>
+        </div>
+    </div>
 
     <div class="row m-0 p-0 g-0">
         <video autoplay muted loop class="video_home">
@@ -484,6 +499,39 @@
         document.addEventListener('DOMContentLoaded',()=>{
             const sideDrawer=document.getElementById('sideDrawer'),
                   menuToggle=document.getElementById('menuToggle');
+            
+            // Newsletter Modal
+            const modal = document.getElementById('newsletterModal');
+            const closeBtn = document.getElementById('closeNewsletter');
+            const form = document.getElementById('newsletterForm');
+
+            // Mostra il modal solo se l'utente non lo ha già visto in questa sessione
+            if (!sessionStorage.getItem('newsletterShown')) {
+                modal.classList.add('show');
+                sessionStorage.setItem('newsletterShown', 'true');
+            }
+
+            // Chiudi il modal al click del pulsante X
+            closeBtn.addEventListener('click', () => {
+                modal.classList.remove('show');
+            });
+
+            // Chiudi il modal al click fuori dal content
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('show');
+                }
+            });
+
+            // Gestisci l'invio del form
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = form.querySelector('input[type="email"]').value;
+                console.log('Email iscritta:', email);
+                // Qui puoi aggiungere la logica per inviare l'email al server
+                modal.classList.remove('show');
+                form.reset();
+            });
             
             document.addEventListener('click',e=>{
                 const dt=e.target.closest('.dt-trigger');

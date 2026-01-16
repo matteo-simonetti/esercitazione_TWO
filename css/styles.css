@@ -1813,18 +1813,27 @@ p, .normal {
   font-family: 'Outfit', sans-serif;
   font-size: 18px;
   color: var(--brand);
-  background: white;
+  background: white !important;
   transition: all 0.3s ease;
 }
 
 .newsletter-form input:focus {
   outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(255, 230, 109, 0.2);
+  border-color: var(--brand);
+  box-shadow: none;
 }
 
 .newsletter-form input::placeholder {
   color: rgba(38, 84, 124, 0.5);
+}
+
+/* Rimuovi autofill giallo del browser per newsletter */
+.newsletter-form input:-webkit-autofill,
+.newsletter-form input:-webkit-autofill:hover,
+.newsletter-form input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: var(--brand) !important;
+  border-color: var(--brand) !important;
 }
 
 .btn-newsletter {
