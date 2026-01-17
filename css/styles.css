@@ -902,13 +902,13 @@ p, .normal {
   }
 
   .dropdown-menu {
-    position: fixed;
-    top: 75px;
-    left: auto;
+    position: absolute;
+    top: calc(100% + 39px);
+    left: 0;
   }
 
   .nav-list .nav-item:nth-child(n+4) .dropdown-menu {
-    top: 115px;
+    top: calc(100% + 40px);
   }
 
   .carousel-item-col {
