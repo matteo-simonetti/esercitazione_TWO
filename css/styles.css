@@ -249,10 +249,6 @@ p, .normal {
   padding-bottom: 100px;
 }
 
-.padding-bottom-150 {
-  padding-bottom: 150px;
-}
-
 .img-freccetta {
   width: 15px;
   height: 15px;
@@ -550,12 +546,13 @@ p, .normal {
   width: 100%;
   min-height: auto;
   padding: 25px 0;
+  margin-bottom: 48px !important; 
 }
 
 .testo_h1 {
   color: white;
   font-size: 48px;
-  margin: 0;
+  margin-bottom: 0 !important;
 }
 
 .voce_fianco {
@@ -1711,6 +1708,26 @@ p, .normal {
   }
 }
 
+/* Footer spacing specifico per Prenota ora */
+.footer.footer-prenota {
+  margin-top: 122px;
+}
+
+/* Footer spacing specifico per Chi Siamo */
+.footer.footer-chi-siamo {
+  margin-top: 100px;
+}
+
+/* Footer spacing specifico per Dove Siamo */
+.footer.footer-dove-siamo {
+  margin-top: 100px;
+}
+
+/* H2 più leggero solo per Maioliche Faenzine */
+.page-maioliche h2 {
+  font-weight: 400;
+}
+
 /* ==========================================
    STILE GRIGLIA FAENZA - DEFINITIVO CON SVG
    ========================================== */
@@ -1759,6 +1776,27 @@ p, .normal {
     transition: all 0.3s ease !important;
 }
 
+.btn-pill-light {
+    background-color: var(--brand) !important;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    padding: 10px 26px !important;
+}
+
+.btn-pill-light .arrow-svg {
+    filter: brightness(0) invert(1) !important;
+}
+
+.btn-pill-light:hover {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.btn-pill-light:hover .arrow-svg {
+    filter: invert(72%) sepia(18%) saturate(1006%) hue-rotate(167deg) brightness(91%) contrast(88%) !important;
+}
+
 /* Gestione SVG Freccetta */
 .arrow-svg {
     width: 16px !important;  /* Dimensione proporzionata al testo */
@@ -1777,6 +1815,57 @@ p, .normal {
 
 /* Quando il bottone è in hover, l'SVG diventa bianco */
 .btn-pill-faenza:hover .arrow-svg {
+    filter: brightness(0) invert(1) !important;
+}
+
+/* Bottoni home (separati da Dove Siamo) */
+.btn-pill-home {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: fit-content !important;
+    padding: 8px 22px !important;
+    border: 1.5px solid #76afd3 !important;
+    border-radius: 50px !important;
+    color: #26547C !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-pill-home-light {
+    background-color: var(--brand) !important;
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    padding: 10px 26px !important;
+}
+
+.btn-pill-home-light .arrow-svg {
+    filter: brightness(0) invert(1) !important;
+}
+
+.btn-pill-home-light:hover {
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+    color: var(--brand) !important;
+}
+
+.btn-pill-home-light:hover .arrow-svg {
+    filter: invert(72%) sepia(18%) saturate(1006%) hue-rotate(167deg) brightness(91%) contrast(88%) !important;
+}
+
+.btn-pill-home:not(.btn-pill-home-light):hover {
+    background-color: #26547C !important;
+    border-color: #26547C !important;
+    color: #ffffff !important;
+}
+
+.btn-pill-home:not(.btn-pill-home-light):hover .arrow-svg {
     filter: brightness(0) invert(1) !important;
 }
 
@@ -2876,3 +2965,65 @@ p, .normal {
                 font-size: 20px;
             }
         }
+/* ==========================================
+   MODULI 2/3 - TESTO PIÙ CORTO (PIÙ RESPIRO)
+   ========================================== */
+
+:root{
+  /* quanto "accorciare" il testo sul lato destro:
+     cresce un po' con lo schermo ma resta controllato */
+  --mod23-pad-right: clamp(24px, 3.2vw, 90px);
+}
+
+.modulo-2-content,
+.modulo-3-content {
+  gap: 14px;
+}
+
+/* Desktop/tablet: manteniamo il punto di partenza (padding-left),
+   ma aumentiamo lo spazio a destra -> testo meno largo */
+@media (min-width: 577px) {
+  .modulo-2-content,
+  .modulo-3-content {
+    padding-right: var(--mod23-pad-right) !important;
+  }
+}
+
+/* Mobile: lascia tutto com'è (già va bene e non c'è affiancamento) */
+@media (max-width: 576px) {
+  .modulo-2-content,
+  .modulo-3-content {
+    padding-right: 15px !important;
+  }
+}
+
+/* ==========================================
+   MODULI 2/3 - GUTTER UGUALE A BORDO E IMMAGINE
+   ========================================== */
+
+:root{
+  --mod23-gutter: 100px; /* desktop */
+}
+
+@media (max-width: 576px){
+  :root{
+    --mod23-gutter: 30px; /* mobile come prima */
+  }
+}
+
+/* Applica lo stesso gutter su entrambi i lati del contenuto testuale */
+.modulo-2-content,
+.modulo-3-content{
+  padding-top: 50px;
+  padding-bottom: 40px;
+  padding-left: var(--mod23-gutter) !important;
+  padding-right: var(--mod23-gutter) !important;
+}
+
+.footer-margin-top{
+  margin-top: 100px;
+}
+
+.margin-top-56{
+  margin-top: 56px;
+}
