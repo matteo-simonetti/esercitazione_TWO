@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>MIC Faenza - Archivio Fotografico</title>
+    <link rel="icon" href="imgs/logo_mic.svg" type="image/x-icon" />
+</head>
+
+<body>
+   <div class="header row m-0 p-0 align-items-center">
+        <div class="col-2 d-flex align-items-center">
+            <a href="index.html">
+                <img src="imgs/logotipo_mic.svg" class="logo" alt="Logo">
+            </a>
+        </div>
+
+        <div class="col-9 d-flex justify-content-end align-items-center" style="position: static;">
+            
+            <div class="desktop-nav-container">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Visita</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="prenota_ora.html">Prenota ora <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="didattica_scuole.html">Didattica per le scuole <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Cosa vedere</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="le_collezioni.html">Le Collezioni <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="calendario_eventi.html">Calendario eventi <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">Info</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="chi_siamo.html">Chi siamo <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="dove_siamo.html">Dove siamo <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                            <li><a href="news.html">News <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">CONSERVAZIONE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="depositi.html" style="font-size: 16px;">Depositi<img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="restauri.html" style="font-size: 16px;">Restauri<img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="progetti.html" style="font-size: 16px;">Progetti<img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link dt-trigger">RISORSE</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="archivio_fotografico.html" style="font-size: 16px;">Archivio Fotografico <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="biblioteca.html" style="font-size: 16px;">Biblioteca <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                            <li><a href="rivista_faenza.html" style="font-size: 16px;">Rivista Faenza <img src="imgs/freccetta.svg" class="arrow-icon-small" alt=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="https://shop.micfaenza.org/" rel="noopener noreferrer" target="_blank" class="nav-link">SHOP</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-header-elements">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">+</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="side-drawer" id="sideDrawer">
+        <button class="drawer-close" id="drawerClose" aria-label="Chiudi menu">✕</button>
+        <ul class="drawer-list">
+            
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Visita <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="prenota_ora.html">Prenota ora <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="didattica_scuole.html">Didattica per le scuole <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Cosa vedere <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="le_collezioni.html">Le Collezioni <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="calendario_eventi.html">Calendario eventi <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Info <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="chi_siamo.html">Chi siamo <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="dove_siamo.html">Dove siamo <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="news.html">News <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Conservazione <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="depositi.html">Depositi <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="progetti.html">Progetti <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="restauri.html">Restauri <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="#" class="drawer-link accordion-trigger">Risorse <span>+</span></a>
+                <ul class="drawer-submenu">
+                    <li><a href="archivio_fotografico.html">Archivio Fotografico <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="biblioteca.html">Biblioteca <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                    <li><a href="rivista_faenza.html">Rivista Faenza <img src="imgs/freccetta.svg" class="arrow-icon" alt=""></a></li>
+                </ul>
+            </li>
+
+            <li class="drawer-item">
+                <a href="https://shop.micfaenza.org/" class="drawer-link">Shop<span>→</span></a>
+            </li>
+        </ul>
+    </div>
+
+<!-- POPUP ARTEFATTO -->
+<div class="artefatto-popup-overlay" id="artefattoPopup">
+    <div class="artefatto-popup">
+        <button class="popup-close" id="popupClose" aria-label="Chiudi">✕</button>
+        <div class="popup-content">
+            <div class="popup-image-container">
+                <img id="popupImage" src="" alt="">
+            </div>
+            <div class="popup-info">
+                <h3 class="popup-title" id="popupTitle"></h3>
+                <p class="popup-subtitle">Fabbrica Ferniani, ultimo quarto del XVIII sec.</p>
+                <div class="popup-description" id="popupDescription"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BODY CONTENT - Pagina Artefatti -->
+
+<div class="container-fluid padding-top-h1" style="max-width: fit-content;">
+    <h1 class="mb-4">Maioliche Faenzine</h1>
+    <h2 class="padding-bottom-100">Fabbrica Ferniani, ultimo quarto del XVIII sec.</h2>
+    
+    <!-- Griglia Artefatti Ottimizzata -->
+    <div class="artefatti-grid">
+        
+        <!-- Artefatto 1 -->
+        <div class="modulo-artefatto">
+            <div class="modulo-artefatto-img">
+                <img src="imgs/a_paesino_verde1.webp" 
+                     alt="vassoio decorato con figura"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+            <div class="modulo-artefatto-content">
+                <h4 class="modulo-artefatto-title">
+                    <a href="#" class="link normal maiuscoletto artefatto-trigger" 
+                       data-image="imgs/a_paesino_verde1.webp"
+                       data-title="Vassoio decorato con figura"
+                       data-description="<p>Elegante vassoio in maiolica decorato con raffinata figura centrale. La decorazione 'a paesino verde' caratterizza questa produzione della Fabbrica Ferniani, mostrando la maestria degli artigiani faentini del XVIII secolo.</p><p>Il verde ramina, tipico della produzione faentina, crea delicate sfumature che impreziosiscono la scena raffigurata, dimostrando l'alta qualità tecnica raggiunta dalla manifattura.</p>">
+                        vassoio decorato con figura
+                    </a>
+                </h4>
+            </div>
+        </div>
+
+        <!-- Artefatto 2 -->
+        <div class="modulo-artefatto">
+            <div class="modulo-artefatto-img">
+                <img src="imgs/a_paesino_verde2.webp" 
+                     alt="Piatto decorato a paesino verde"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+            <div class="modulo-artefatto-content">
+                <h4 class="modulo-artefatto-title">
+                    <a href="#" class="link normal maiuscoletto artefatto-trigger"
+                       data-image="imgs/a_paesino_verde2.webp"
+                       data-title="Piatto decorato 'a paesino verde'"
+                       data-description="<p>Raffinato piatto da portata realizzato dalla Fabbrica Ferniani con la caratteristica decorazione 'a paesino verde'. La tecnica prevede l'uso di verde ramina per creare delicate scene campestri.</p><p>Questo tipo di decorazione rappresenta un punto di eccellenza nella produzione ceramica faentina del Settecento, unendo eleganza formale e perizia tecnica esecutiva.</p>">
+                        piatto decorato "a paesino verde"
+                    </a>
+                </h4>
+            </div>
+        </div>
+
+        <!-- Artefatto 3 -->
+        <div class="modulo-artefatto">
+            <div class="modulo-artefatto-img">
+                <img src="imgs/a_paesino_verde3.webp" 
+                     alt="Caffettiera decorata con coperchio a paesino verde"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+            <div class="modulo-artefatto-content">
+                <h4 class="modulo-artefatto-title">
+                    <a href="#" class="link normal maiuscoletto artefatto-trigger"
+                       data-image="imgs/a_paesino_verde3.webp"
+                       data-title="Caffettiera decorata con coperchio 'a paesino verde'"
+                       data-description="<p>Pregevole caffettiera completa di coperchio, decorata con motivi 'a paesino verde'. Questo oggetto testimonia come la produzione Ferniani si estendesse anche agli arredi da tavola per il servizio delle bevande calde.</p><p>La forma elegante e la decorazione raffinata ne fanno un esempio significativo dell'arte ceramica faentina destinata alle classi più abbienti del XVIII secolo.</p>">
+                        caffettiera decorata con coperchio "a paesino verde"
+                    </a>
+                </h4>
+            </div>
+        </div>
+
+        <!-- Artefatto 4 -->
+        <div class="modulo-artefatto">
+            <div class="modulo-artefatto-img">
+                <img src="imgs/a_paesino_verde4.webp" 
+                     alt="Piatto decorato con figura e natura a paesino verde"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+            <div class="modulo-artefatto-content">
+                <h4 class="modulo-artefatto-title">
+                    <a href="#" class="link normal maiuscoletto artefatto-trigger"
+                       data-image="imgs/a_paesino_verde4.webp"
+                       data-title="Piatto decorato con figura e natura"
+                       data-description="<p>Piatto ornamentale che combina figure umane ed elementi naturalistici nella caratteristica tonalità verde ramina. La composizione equilibrata mostra l'influenza del gusto rococò nella produzione ceramica faentina.</p><p>L'armonia tra figura centrale e cornice decorativa testimonia l'alta capacità compositiva dei maestri decoratori della Fabbrica Ferniani.</p>">
+                        piatto decorato con figura e natura
+                    </a>
+                </h4>
+            </div>
+        </div>
+
+        <!-- Artefatto 5 -->
+        <div class="modulo-artefatto">
+            <div class="modulo-artefatto-img">
+                <img src="imgs/a_paesino_verde5.webp" 
+                     alt="Caffettiera decorata con coperchio a paesino verde #2"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+            <div class="modulo-artefatto-content">
+                <h4 class="modulo-artefatto-title">
+                    <a href="#" class="link normal maiuscoletto artefatto-trigger"
+                       data-image="imgs/a_paesino_verde5.webp"
+                       data-title="Caffettiera decorata con coperchio 'a paesino verde' #2"
+                       data-description="<p>Seconda variante di caffettiera della produzione Ferniani, che mostra la ricchezza del repertorio decorativo 'a paesino verde'. Ogni pezzo presenta variazioni uniche pur mantenendo lo stile caratteristico della manifattura.</p><p>L'oggetto riflette l'evoluzione del gusto settecentesco verso forme più aggraziate e decorazioni sempre più raffinate, simbolo di status sociale ed eleganza.</p>">
+                        caffettiera decorata con coperchio "a paesino verde #2"
+                    </a>
+                </h4>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="container-xxl px-0">
+    <div class="footer-logo">
+      <img src="imgs/logotipo_mic.svg" alt="MIC Logo">
+    </div>
+
+    <div class="footer-contact">
+      <div class="row footer-contact-row">
+        <div class="col-12 col-md-auto">
+          <p>Viale Baccarini n. 19<br>48018 Faenza (RA)</p>
+        </div>
+
+        <div class="col-12 col-md-auto">
+          <p>Telefono: <a href="tel:+390546697311">+39 0546 69 73 11</a></p>
+        </div>
+
+        <div class="col-12 col-md-auto">
+          <p>Email: <a href="mailto:info@micfaenza.org">info@micfaenza.org</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div class="row footer-links-row">
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-2 footer-section">
+          <h4>Visita</h4>
+          <ul>
+            <li><a href="prenota_ora.html">Prenota ora</a></li>
+            <li><a href="didattica_scuole.html">Didattica per le scuole</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-2 footer-section">
+          <h4>Cosa vedere</h4>
+          <ul>
+            <li><a href="le_collezioni.html">Le Collezioni</a></li>
+            <li><a href="calendario_eventi.html">Calendario Eventi</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-2 footer-section">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="chi_siamo.html">Chi siamo</a></li>
+            <li><a href="dove_siamo.html">Dove siamo</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-2 footer-section">
+          <h4>Conservazione</h4>
+          <ul>
+            <li><a href="depositi.html">Depositi</a></li>
+            <li><a href="restauri.html">Restauri</a></li>
+            <li><a href="progetti.html">Progetti</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-2 footer-section">
+          <h4>Risorse</h4>
+          <ul>
+            <li><a href="archivio_fotografico.html">Archivio Fotografico</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="rivista_faenza.html">Rivista Faenza</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-2 footer-section">
+          <h4>Altro sul museo</h4>
+          <ul>
+            <li><a href="#">Accessibilità</a></li>
+            <li><a href="#">Contatti</a></li>
+            <li><a href="#">Sostienici</a></li>
+            <li><a href="https://shop.micfaenza.org/" rel="noopener noreferrer" target="_blank">Bookshop</a></li>
+            <li><a href="#">Premio Faenza</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- JavaScript per lazy loading ottimizzato e interazioni -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // ==========================================
+    // GESTIONE POPUP ARTEFATTI
+    // ==========================================
+    const popupOverlay = document.getElementById('artefattoPopup');
+    const popupClose = document.getElementById('popupClose');
+    const popupImage = document.getElementById('popupImage');
+    const popupTitle = document.getElementById('popupTitle');
+    const popupDescription = document.getElementById('popupDescription');
+    
+    // Apri popup
+    document.querySelectorAll('.artefatto-trigger').forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const image = this.getAttribute('data-image');
+            const title = this.getAttribute('data-title');
+            const description = this.getAttribute('data-description');
+            
+            popupImage.src = image;
+            popupImage.alt = title;
+            popupTitle.textContent = title;
+            popupDescription.innerHTML = description;
+            
+            popupOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Chiudi popup
+    function closePopup() {
+        popupOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    popupClose.addEventListener('click', closePopup);
+    
+    // Chiudi cliccando sull'overlay
+    popupOverlay.addEventListener('click', function(e) {
+        if (e.target === popupOverlay) {
+            closePopup();
+        }
+    });
+    
+    // Chiudi con tasto ESC
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+            closePopup();
+        }
+    });
+    
+    
+    // ==========================================
+    // GESTIONE LAZY LOADING IMMAGINI
+    // ==========================================
+    const images = document.querySelectorAll('.modulo-artefatto-img img');
+    
+    images.forEach(img => {
+        const container = img.parentElement;
+        
+        if (!img.complete) {
+            container.classList.add('loading');
+        }
+        
+        img.addEventListener('load', function() {
+            img.classList.add('loaded');
+            container.classList.remove('loading');
+        });
+        
+        if (img.complete) {
+            img.classList.add('loaded');
+            container.classList.remove('loading');
+        }
+        
+        img.addEventListener('error', function() {
+            container.classList.remove('loading');
+            console.warn('Errore caricamento immagine:', img.src);
+        });
+    });
+    
+    
+    // ==========================================
+    // MENU MOBILE - SIDE DRAWER
+    // ==========================================
+    const menuToggle = document.getElementById('menuToggle');
+    const sideDrawer = document.getElementById('sideDrawer');
+    const drawerClose = document.getElementById('drawerClose');
+    
+    if (menuToggle && sideDrawer) {
+        menuToggle.addEventListener('click', function() {
+            sideDrawer.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        if (drawerClose) {
+            drawerClose.addEventListener('click', function() {
+                sideDrawer.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        }
+        
+        sideDrawer.addEventListener('click', function(e) {
+            if (e.target === sideDrawer) {
+                sideDrawer.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    
+    
+    // ==========================================
+    // ACCORDION MOBILE MENU
+    // ==========================================
+    const accordionTriggers = document.querySelectorAll('.drawer-link.accordion-trigger');
+    
+    accordionTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const submenu = this.nextElementSibling;
+            const isOpen = submenu.classList.contains('open');
+            
+            document.querySelectorAll('.drawer-submenu.open').forEach(menu => {
+                if (menu !== submenu) {
+                    menu.classList.remove('open');
+                    menu.previousElementSibling.classList.remove('active-color');
+                }
+            });
+            
+            if (isOpen) {
+                submenu.classList.remove('open');
+                this.classList.remove('active-color');
+            } else {
+                submenu.classList.add('open');
+                this.classList.add('active-color');
+            }
+        });
+    });
+    
+    
+    // ==========================================
+    // DROPDOWN MENU DESKTOP
+    // ==========================================
+    const navItems = document.querySelectorAll('.nav-item');
+    
+    navItems.forEach(item => {
+        const trigger = item.querySelector('.dt-trigger');
+        const dropdown = item.querySelector('.dropdown-menu');
+        
+        if (trigger && dropdown) {
+            let timeoutId;
+            
+            item.addEventListener('mouseenter', function() {
+                clearTimeout(timeoutId);
+                
+                document.querySelectorAll('.dropdown-menu.active').forEach(menu => {
+                    if (menu !== dropdown) {
+                        menu.classList.remove('active');
+                        menu.previousElementSibling.classList.remove('active-state');
+                    }
+                });
+                
+                dropdown.classList.add('active');
+                trigger.classList.add('active-state');
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                timeoutId = setTimeout(() => {
+                    dropdown.classList.remove('active');
+                    trigger.classList.remove('active-state');
+                }, 100);
+            });
+        }
+    });
+    
+    
+    // ==========================================
+    // SMOOTH SCROLL PER ANCHOR LINK
+    // ==========================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            if (href === '#' || this.classList.contains('accordion-trigger') || this.classList.contains('dt-trigger') || this.classList.contains('artefatto-trigger')) {
+                return;
+            }
+            
+            e.preventDefault();
+            const target = document.querySelector(href);
+            
+            if (target) {
+                const headerOffset = 115;
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    
+    // ==========================================
+    // INTERSECTION OBSERVER PER ANIMAZIONI
+    // ==========================================
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    document.querySelectorAll('.modulo-artefatto').forEach((module, index) => {
+        module.style.opacity = '0';
+        module.style.transform = 'translateY(20px)';
+        module.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+        observer.observe(module);
+    });
+    
+    
+    console.log('🎨 MIC Faenza - Pagina Artefatti caricata');
+    console.log('📸 Immagini totali:', images.length);
+    console.log('🖼️ Moduli artefatti:', document.querySelectorAll('.modulo-artefatto').length);
+    
+});
+
+
+let resizeTimeout;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function() {
+        console.log('Window resized:', window.innerWidth);
+    }, 250);
+});
+</script>
+    </body>

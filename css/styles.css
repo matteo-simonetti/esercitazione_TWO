@@ -2492,3 +2492,387 @@ p, .normal {
 .link-popup:hover {
   color: var(--accent);
 }
+/* ==========================================
+   MODULI ARTEFATTI - OTTIMIZZATI
+   ========================================== */
+
+/* Container principale per artefatti */
+.artefatti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+/* Singolo modulo artefatto */
+.modulo-artefatto {
+  background: var(--brand);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modulo-artefatto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Container immagine con aspect ratio */
+.modulo-artefatto-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.modulo-artefatto-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantiene l'immagine interamente visibile */
+  object-position: center;
+  display: block;
+  background: #f5f5f5; /* Sfondo neutro per letterboxing */
+}
+
+/* Variante con object-fit cover per immagini landscape */
+.modulo-artefatto-img.cover img {
+  object-fit: cover;
+}
+
+/* Contenuto testuale */
+.modulo-artefatto-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.modulo-artefatto-title {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 30px;
+  margin: 0;
+  font-variant: small-caps;
+}
+
+.modulo-artefatto-title a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.modulo-artefatto-title a:hover {
+  color: var(--accent-hover);
+}
+
+.modulo-artefatto-subtitle {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ==========================================
+   VARIANTI DI DIMENSIONE
+   ========================================== */
+
+/* Modulo piccolo */
+.modulo-artefatto-sm .modulo-artefatto-img {
+  aspect-ratio: 1 / 1;
+}
+
+.modulo-artefatto-sm .modulo-artefatto-content {
+  padding: 15px;
+}
+
+.modulo-artefatto-sm .modulo-artefatto-title {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* Modulo grande */
+.modulo-artefatto-lg .modulo-artefatto-img {
+  aspect-ratio: 16 / 9;
+}
+
+.modulo-artefatto-lg .modulo-artefatto-content {
+  padding: 30px;
+}
+
+.modulo-artefatto-lg .modulo-artefatto-title {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+/* ==========================================
+   GRIGLIA RESPONSIVE OTTIMIZZATA
+   ========================================== */
+
+/* Desktop large */
+@media (min-width: 1200px) {
+  .artefatti-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Desktop standard */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .artefatti-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .artefatti-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+/* Mobile large */
+@media (min-width: 576px) and (max-width: 767px) {
+  .artefatti-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .modulo-artefatto-img {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Mobile small */
+@media (max-width: 575px) {
+  .artefatti-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .modulo-artefatto-img {
+    aspect-ratio: 4 / 3;
+  }
+  
+  .modulo-artefatto-content {
+    padding: 15px;
+  }
+  
+  .modulo-artefatto-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+/* ==========================================
+   VARIANTI DI COLORE
+   ========================================== */
+
+.modulo-artefatto.bg-light {
+  background: #FFFDEE;
+  color: var(--brand);
+}
+
+.modulo-artefatto.bg-light .modulo-artefatto-title a {
+  color: var(--brand);
+}
+
+.modulo-artefatto.bg-light .modulo-artefatto-title a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ==========================================
+   LOADING E PERFORMANCE
+   ========================================== */
+
+.modulo-artefatto-img img {
+  /* Ottimizzazione rendering */
+  transform: translateZ(0);
+  will-change: auto;
+}
+
+/* Lazy loading placeholder */
+.modulo-artefatto-img.loading {
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Fade in quando l'immagine è caricata */
+.modulo-artefatto-img img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modulo-artefatto-img img.loaded {
+  opacity: 1;
+}
+/* POPUP STYLES */
+        .artefatto-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .artefatto-popup-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .artefatto-popup {
+            background: white;
+            max-width: 900px;
+            width: 90%;
+            max-height: 90vh;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .artefatto-popup-overlay.active .artefatto-popup {
+            transform: scale(1);
+        }
+        
+        .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+        
+        .popup-close:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+        
+        .popup-content {
+            display: flex;
+            overflow-y: auto;
+            max-height: 90vh;
+        }
+        
+        .popup-image-container {
+            flex: 0 0 50%;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+        
+        .popup-image-container img {
+            max-width: 100%;
+            max-height: 70vh;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+        
+        .popup-info {
+            flex: 0 0 50%;
+            padding: 40px;
+            overflow-y: auto;
+        }
+        
+        .popup-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.3;
+        }
+        
+        .popup-subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .popup-description {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #333;
+        }
+        
+        .popup-description p {
+            margin-bottom: 15px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .artefatto-popup {
+                width: 95%;
+                max-height: 95vh;
+            }
+            
+            .popup-content {
+                flex-direction: column;
+            }
+            
+            .popup-image-container,
+            .popup-info {
+                flex: 1 1 auto;
+            }
+            
+            .popup-image-container {
+                padding: 20px;
+                min-height: 250px;
+            }
+            
+            .popup-info {
+                padding: 25px;
+            }
+            
+            .popup-title {
+                font-size: 22px;
+            }
+            
+            .popup-close {
+                width: 35px;
+                height: 35px;
+                font-size: 20px;
+            }
+        }
