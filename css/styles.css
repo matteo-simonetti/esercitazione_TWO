@@ -2604,7 +2604,7 @@ p, .normal {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 /* Singolo modulo artefatto */
@@ -3035,9 +3035,13 @@ p, .normal {
 }
 
 .footer-margin-top{
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .margin-top-56{
   margin-top: 56px;
+}
+
+.padding-top-100{
+  padding-top: 100px;
 }
