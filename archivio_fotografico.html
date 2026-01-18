@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <title>MIC Faenza - Archivio Fotografico</title>
     <link rel="icon" href="imgs/logo_mic.svg" type="image/x-icon" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
 <body>
@@ -149,7 +150,7 @@
             </div>
         </div>
         <div class="modulo-2-buttons">
-                <a class="btn-generico" href="#">Scarica il regolamento</a>
+                <a class="btn-generico" href="#" id="downloadRegolamento">Scarica il regolamento</a>
                 <a class="btn-generico" href="mailto:info@micfaenza.org">contattaci</a>
             </div>
     </div>
@@ -310,6 +311,53 @@
                     sideDrawer.classList.remove('open');
                     menuToggle.textContent='+';
                 }
+            });
+
+            // Genera PDF per il regolamento
+            document.getElementById('downloadRegolamento').addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const html = `
+                    <div style="font-family: Arial, sans-serif; padding: 40px; max-width: 800px;">
+                        <h1 style="text-align: center; color: #333; margin-bottom: 30px;">Regolamento Archivio Fotografico</h1>
+                        
+                        <h2 style="color: #555; margin-top: 30px;">1. Scopo e Oggetto</h2>
+                        <p>Il presente regolamento disciplina le modalità di richiesta, utilizzo e riproduzione delle immagini in formato digitale conservate nell'Archivio Fotografico del Museo Internazionale delle Ceramiche (MIC) di Faenza.</p>
+                        
+                        <h2 style="color: #555; margin-top: 30px;">2. Ambito di Applicazione</h2>
+                        <p>Le presenti norme si applicano a tutte le immagini fotografiche, i negativi e i supporti digitali custoditi presso l'archivio del museo, nonché alle relative riproduzioni video delle opere conservate.</p>
+                        
+                        <h2 style="color: #555; margin-top: 30px;">3. Richieste di Riproduzione</h2>
+                        <p>Le immagini digitali dell'archivio fotografico possono essere richieste per la pubblicazione su riviste, cataloghi e siti web secondo le modalità specificate nel presente regolamento.</p>
+                        
+                        <h2 style="color: #555; margin-top: 30px;">4. Diritti e Utilizzo</h2>
+                        <p>L'utilizzo delle immagini è consentito esclusivamente per gli scopi specificati nella richiesta. Qualsiasi altro utilizzo deve essere preventivamente autorizzato dal museo.</p>
+                        
+                        <h2 style="color: #555; margin-top: 30px;">5. Riproduzione Video</h2>
+                        <p>Le riproduzioni video delle opere sono sottoposte alle medesime condizioni di utilizzo previste per le fotografie digitali.</p>
+                        
+                        <h2 style="color: #555; margin-top: 30px;">6. Modalità di Contatto</h2>
+                        <p>Per informazioni e richieste, contattare: info@micfaenza.org</p>
+                        
+                        <h2 style="color: #555; margin-top: 30px;">7. Disposizioni Finali</h2>
+                        <p>Il museo si riserva il diritto di modificare il presente regolamento. Le modifiche saranno comunicate con opportuno preavviso.</p>
+                        
+                        <div style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #ccc; font-size: 12px; color: #999;">
+                            <p>Museo Internazionale delle Ceramiche - Faenza (RA)</p>
+                            <p>Data di generazione: ${new Date().toLocaleDateString('it-IT')}</p>
+                        </div>
+                    </div>
+                `;
+                
+                const opt = {
+                    margin: 10,
+                    filename: 'Regolamento_Archivio_Fotografico.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 },
+                    jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+                };
+                
+                html2pdf().set(opt).from(html).save();
             });
         });
     </script>
