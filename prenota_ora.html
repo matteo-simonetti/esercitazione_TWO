@@ -123,6 +123,59 @@
 
 
     <!-- Main -->
+     <!-- Form Modal -->
+    <div id="workshopFormModal" class="workshop-form-modal">
+        <div class="workshop-form-content">
+            <button class="workshop-form-close" id="closeFormBtn" aria-label="Chiudi">✕</button>
+            <h2>Prenotazione Workshop</h2>
+            <form id="workshopForm" class="workshop-form">
+                <div class="form-group">
+                    <label for="referente">Referente*</label>
+                    <input type="text" id="referente" name="referente" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="scuola">Scuola/Università*</label>
+                    <input type="text" id="scuola" name="scuola">
+                </div>
+
+                <div class="form-group">
+                    <label for="alunni">n. alunni*</label>
+                    <input type="number" id="alunni" name="alunni">
+                </div>
+
+                <div class="form-group">
+                    <label for="laboratorio">Laboratorio d'interesse**</label>
+                    <select id="laboratorio" name="laboratorio">
+                        <option value="">Seleziona un laboratorio</option>
+                        <option value="a_tavola_con_i_romani">A tavola con i Romani</option>
+                        <option value="amuleti_precolombiani">Amuleti precolombiani</option>
+                        <option value="altro">Altro (specificarlo nel messaggio)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="messaggio">Messaggio</label>
+                    <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="datiPersonali" name="datiPersonali" required>
+                        <span>Accetto il trattamento dei dati personali*</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="workshop-form-submit">Invia Richiesta</button>
+            </form>
+        </div>
+    </div>
+
 
     <div class="container-fluid p-0">
             <h1 class="padding-bottom-56 padding-top-h1">Prenota ora</h1>
@@ -248,7 +301,7 @@
             <div class="row normal">
                 <div class="col-12 padding-bottom-28"><span class="semibold">Scuole dell'infanzia, primarie e secondarie di 1° grado:</span> Ingresso gratuito</div>
                 <div class="col-12 padding-bottom-28"><span class="semibold">Scuole secondarie di 2° grado e università:</span> 6€ per studente</div>
-                <div class="col-12 padding-bottom-56">Per la prenotazione di visite guidate, laboratori o workshop, <a href="#" class="semibold" style="text-decoration: underline; color: #26547C;">compila il form<img src="imgs/freccetta-blu.svg" class="img-freccetta" alt="arrow"></a>
+                <div class="col-12 padding-bottom-56">Per la prenotazione di visite guidate, laboratori o workshop, <a href="#" id="compilaFormLink" class="semibold" style="text-decoration: underline; color: #26547C;">compila il form<img src="imgs/freccetta-blu.svg" class="img-freccetta" alt="arrow"></a>
             </div>
         </div>
 
@@ -686,6 +739,51 @@
 
         // Make deleteFromCart available globally for inline onclick
         window.deleteFromCart = deleteFromCart;
+        // Workshop Form Modal
+            const formModal = document.getElementById('workshopFormModal');
+            const closeFormBtn = document.getElementById('closeFormBtn');
+            const compilaFormLink = document.getElementById('compilaFormLink');
+            const workshopForm = document.getElementById('workshopForm');
+
+            // Apri il modal
+            if (compilaFormLink) {
+                compilaFormLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    formModal.classList.add('show');
+                });
+            }
+
+            // Chiudi il modal con il pulsante X
+            if (closeFormBtn) {
+                closeFormBtn.addEventListener('click', () => {
+                    formModal.classList.remove('show');
+                });
+            }
+
+            // Chiudi il modal cliccando fuori dal content
+            if (formModal) {
+                formModal.addEventListener('click', (e) => {
+                    if (e.target === formModal) {
+                        formModal.classList.remove('show');
+                    }
+                });
+            }
+
+            // Gestisci l'invio del form
+            if (workshopForm) {
+                workshopForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const datiPersonali = document.getElementById('datiPersonali').checked;
+                    if (!datiPersonali) {
+                        alert('Devi accettare il trattamento dei dati personali');
+                        return;
+                    }
+                    console.log('Form inviato');
+                    formModal.classList.remove('show');
+                    workshopForm.reset();
+                    alert('Richiesta inviata con successo!');
+                });
+            }
     </script>
 </body>
 </html>
