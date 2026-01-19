@@ -539,7 +539,7 @@ p, .normal {
 .video_home {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 74.7vh; /* Altezza video home page, prima era 500px*/
   object-fit: cover;
   padding: 0;
   margin: 0;
